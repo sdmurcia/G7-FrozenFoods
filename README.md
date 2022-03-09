@@ -1,4 +1,4 @@
-# G7-FrozenFoods
+# Grupo-7-FrozenFoods
 E-commerce de productos congelados, pueden ir desde menus elaborados hasta productos crudos congelados.
 Personas que consumen los productos en el día a día, amas de casa con hijos de 6 a 18 años.
 
