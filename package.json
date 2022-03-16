@@ -1,0 +1,25 @@
+{
+  "name": "g7-frozenfoods",
+  "version": "1.0.0",
+  "description": "E-commerce de productos congelados, pueden ir desde menus elaborados hasta productos crudos congelados.\r Personas que consumen los productos en el día a día, amas de casa con hijos de 6 a 18 años o adultos mayores.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdmurcia/G7-FrozenFoods.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdmurcia/G7-FrozenFoods/issues"
+  },
+  "homepage": "https://github.com/sdmurcia/G7-FrozenFoods#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
