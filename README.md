@@ -15,4 +15,4 @@ Soy de Bogotá, Colombia. Tengo 30 años y me decidí meter al munedo del desarr
 ### Julian Huertas:
 Egresado de Marketing y Negocios, de Bogotá, estudio lenguajes de programación ya que son el futuro orden de casi todo.
 ### Julian Anderfuhrn:
-Soy de argentina, tengo 21 años y actualmente estoy en el segundo año de la licenciatura(UNQ). Trabajo en una farmacia, y desde chico siempre me gustaron las computadoras, la logica y las cosas dificiles. 
+Soy de argentina, tengo 21 años y actualmente estoy en el segundo año de la licenciatura en informatica(UNQ). Trabajo en una farmacia, y desde chico siempre me gustaron las computadoras, la logica y las cosas dificiles. 
