@@ -1,0 +1,169 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box; 
+    margin: 0px;
+    border: 0px;  
+   }
+body {
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Salsa', cursive;
+}
+.estilo-body{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+footer {
+     margin: auto;
+     width: 90vw;
+     background: #D2D4C8;
+     opacity: 50%;
+     box-shadow: inset 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+     padding: 10px;
+     font-size: 1.2rem;
+}
+
+/*header*/
+header {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    padding: 0.5rem;
+    
+}
+.menu-container {
+    display: flex;
+    padding: 0.2rem;
+}
+.user-container {
+    display: flex;
+}
+.searcher {
+    font-family: "Font Awesome 5 Free"; font-weight: 900
+}
+p {
+    font-size: 1.2rem;
+}
+/*header*/
+
+/*Aquí empiezan los estilos propios del footer*/
+/*el footer es un elemento flex, aquí se configura los tamaños de los elemntos que contiene, su alineación, etc...*/
+footer{
+    margin: 0 auto;
+    padding:1rem 0;
+}
+footer article{
+    width: 25vw;
+}
+.piedepagina{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+.textosfooter{
+    text-align: center;
+    list-style: none;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+.iconosfooter{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 0.2rem;
+    }
+.iconos{
+    font-size: 2rem;
+}
+a{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+footer section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer h6{
+    margin-top: 0.3rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+/*Cree esta media-querie para que en celulares, se oculté el texto de cada categoría*/
+@media (max-width: 360px){
+    footer article{
+        width: 80vw;
+    }
+    .textosfooter{
+        display: none;
+    }
+}
+/*Formulario sign-in*/
+.aviso-bienvenida{
+    width: 100vw;
+    display: block;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+    color: #889696;
+}
+label {
+    font-size: 1.2rem;
+}
+.textos-e-input{
+    margin: 3rem 0;
+}
+.textos-guia{
+    font-size: 1.2rem;
+    display: block;
+    margin: 1rem 0 0 0;
+    font-style: italic;
+
+}
+.cuadros-input{
+    border: 1px solid #E0E2DB;
+    border-radius: 0.5rem;
+    padding: 3px 0px;
+    width: 270px;
+}
+
+.botonsignin{
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    margin: 3rem auto;
+    background-color: #889696;
+    color: #E0E2DB;
+    padding: 7px 5px;
+    border: none;
+    border-radius: 10px;
+    width: 270px;
+    }
+.formulariosign{
+    position: relative;
+    border: 0.3rem solid #5F7470;
+    border-radius: 5rem;
+    width: 300px;
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 0.5rem;
+        }
+.recordarme{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
