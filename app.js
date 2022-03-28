@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 app.get('/footer', (req, res) => {
   res.sendFile(path.join(__dirname,'./views/footer.html'))
 })
-app.get('/header', (req, res) => {
-    res.sendFile(path.join(__dirname,'./views/header.html'))
+app.get('/estructura', (req, res) => {
+    res.sendFile(path.join(__dirname,'./views/estructura.html'))
   })
   app.get('/sign-in', (req, res) => {
     res.sendFile(path.join(__dirname,'./views/sign-in.html'))
