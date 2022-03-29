@@ -16,3 +16,6 @@ Soy de Bogotá, Colombia. Tengo 30 años y me decidí meter al munedo del desarr
 Egresado de Marketing y Negocios, de Bogotá, estudio lenguajes de programación ya que son el futuro orden de casi todo.
 ### Julian Anderfuhrn:
 Soy de argentina, tengo 21 años y actualmente estoy en el segundo año de la licenciatura en informatica(UNQ). Trabajo en una farmacia, y desde chico siempre me gustaron las computadoras, la logica y las cosas dificiles. 
+
+## Link tablero trello:
+*https://trello.com/b/FNApuyZU/frozenfoods

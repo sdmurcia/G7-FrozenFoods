@@ -91,42 +91,7 @@ header i {
     color: #4e4e4e;
 }
 /*header*/
-/*main*/
-.banner {
-    height: 15rem;
-    opacity: 0.8;
-    width: 100vw;
-}
-.banner-container {
-    position: relative;
-}
-.banner-container p {
-    font-size: 1.8rem;
-    color: #ffffff;
-}
-.oferta-p {
-    position: absolute;
-    top: 0;
-    left: 1rem;
-}
-.descuento-p {
-    position: absolute;
-    top: 11rem;
-    right: 2rem;
-}
-section img {
-    width: 17rem;
-    height: 20rem;
-    border-radius: 1rem;
-}
-section{
-    display: flex;
-    justify-content: center;
-    column-gap: 2rem;
 
-}
-
-/*main*/
 /*footer*/
 footer {
     margin: auto;
