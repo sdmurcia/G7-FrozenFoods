@@ -167,3 +167,13 @@ label {
     justify-content: space-around;
     align-items: center;
 }
+.finalform{
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    }
+    .textosubrayado{
+        text-decoration: underline;
+    }
