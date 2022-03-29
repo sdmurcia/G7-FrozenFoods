@@ -18,4 +18,4 @@ Egresado de Marketing y Negocios, de Bogotá, estudio lenguajes de programación
 Soy de argentina, tengo 21 años y actualmente estoy en el segundo año de la licenciatura en informatica(UNQ). Trabajo en una farmacia, y desde chico siempre me gustaron las computadoras, la logica y las cosas dificiles. 
 
 ## Link tablero trello:
-*https://trello.com/b/FNApuyZU/frozenfoods
+* https://trello.com/b/FNApuyZU/frozenfoods
