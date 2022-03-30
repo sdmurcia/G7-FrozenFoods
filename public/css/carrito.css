@@ -1,11 +1,11 @@
 main{
-    position: relative;
+    /*position: relative;*/
     width:90vw;
     margin: auto;
-    height: 70vh;
-    padding: 5px;
+    /*height: 70vh;*/
+    padding: 3px;
 }
-.contenido-carrito {
+.main-carrito {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -28,7 +28,7 @@ main{
     width: 100px;
 }
 .textoscarrito{
-    width:21vw;
+    width:25vw;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -45,15 +45,17 @@ main{
 .precios{
 color:#5F7470;
 font-size: 2.4rem;
+width: 6vw;
 }
 .seccion-carritores{
     border: 0.3rem solid #5F7470;
+    background-color: #E0E2DB;
     border-radius: 5rem;
     width: 300px;
     margin: 2rem auto;
     padding: 1rem 0.5rem;
     justify-self: center;
-    position: relative;
+    position: sticky;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -67,6 +69,7 @@ font-size: 2.4rem;
     align-items: center;
 }
 .titulos-resumen-carrito{
+    text-align: center;
     font-size: 1.8rem;
     display: flex;
     flex-flow: column nowrap;
@@ -81,12 +84,12 @@ font-size: 2.4rem;
     align-items: center;
 }
 .botoncarrito{
-    position: absolute;
+    position: relative;
     font-size: 1.6rem;
-    margin: 3rem auto;
+    margin: 1rem auto;
     background-color: #889696;
     color: #E0E2DB;
-    padding: 7px 5px;
+    padding: 0.6rem 0.5rem 0.3rem 0.5rem;
     border: none;
     border-radius: 10px;
     
@@ -97,10 +100,16 @@ font-size: 2.4rem;
         }
   .articulocarrito{
       flex-wrap: wrap;
+      width: 80vw;
         }
   .textoscarrito{
       width:100%;
       justify-content: center;
+        }
+  .main-carrito {
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
         }
 }
 
