@@ -1,0 +1,66 @@
+/*main*/
+.imagenes{
+  width: 100%;
+}
+article{
+  justify-content: center;
+}
+.productmain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.product2 {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.imagenes2{
+  width: 100px
+}
+h3 {
+  border: 1px solid #d8d8d8;
+  text-align: center;
+  width: 19rem;
+  align-self: center;
+}
+.descuento {
+  top: 11rem;
+  right: 2rem;
+}
+section img {
+  width: 17rem;
+  height: 20rem;
+  border-radius: 1rem;
+}
+section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+section .productsview{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+section .products2{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.textoscarrito{
+  width:100%;
+  justify-content: center;
+    }
+/*main*/
+/*footer*/
+footer{
+  position: static;
+  
+}

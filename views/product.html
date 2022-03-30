@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/stylesf.css">
+    <link rel="stylesheet" href="/css/estuctura.css">
+    <link rel="stylesheet" href="/css/producto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Salsa&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d23aa527fe.js" crossorigin="anonymous"></script> <!--script para poder incluir iconos de fontawesome-->
-    <title>Header</title>
+    <title>Descripcion Producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
@@ -37,61 +38,69 @@
         <div class="mainc">
             <!-- Seccion primer producto-->
             <section class="productsview">
+              <section class="productmain">
               <article class="product">
                 <div class="imagenes">
                   <img src="/images/frijolbbq.jpg" alt="FrijolBbq" />
                 </div>
-      
-      
                 <div>
                   <h3>Frijol BBQ</h3>
                   <p>Precio Unitario</p>
                 </div>
                 <div>
                   <p class="precio-anterior">$3.00</p>
-                  <p>$3.00</p>
                   <p class="descuento">20% off</p>
                   <p>Subtotal</p>
                   <p>$2.50</p>
-                  <p>Frijol verde, cebolla, pimenton, fondo de verduras, paprika, pasta de tomate, miel maple, salsa bbq y sal</p>
+                  <p>Frijol verde, cebolla, pimenton, fondo de verduras, paprika, 
+                    pasta de tomate, miel maple, salsa bbq y sal</p>
+                  <div class="cantidad">
+                      <p class="tituloscarrito">Cantidad</p>
+                      <p class="tituloscarrito">
+                          <i class="fa-solid fa-circle-minus"></i>
+                          1
+                          <i class="fa-solid fa-circle-plus"></i>
+                      </p>
+                  </div>
                 </div>
               </article>
-              <!-- Segundo articulo-->
-              <article class="product">
-                <div class="imagenes">
-                  <img src="/images/pollo-curry.jpg" alt="PolloCurry" />
-                </div>
-                <div>
-                  <h3>Pollo Curry</h3>
-                  <p>Precio Unitario</p>
-                </div>
-                <div>
-                  <p class="precio-anterior">$4.00</p>
-                  <p>$4.00</p>
-                  <p class="descuento">10% off</p>
-                  <p>Subtotal</p>
-                  <p>$3.60</p>
-                  <p>Cebolla  cabezona,genjibre,ajo,curry amarillo en polvo,tomate y leche de coco</p>
-                </div>
-              </article>
-               <!-- Tercer articulo-->
-               <article class="product">
-                <div class="imagenes">
-                  <img src="/images/lasaña.jpg" alt="Lasaña" />
-                </div>
-                <div>
-                  <h3>Lasaña</h3>
-                  <p>Precio Unitario</p>
-                </div>
-                <div>
-                  <p class="precio-anterior">$4.00</p>
-                  <p>$4.00</p>
-                  <p class="descuento">10% off</p>
-                  <p>Subtotal</p>
-                  <p>$3.60</p>
-                  <p>Pechuga desmechada, tomates seleccionados, cebolla, pesto,hiervas aromatizantes</p>
-                </div>
-              </article>
+              </section> 
+              <!-- Segundarios articulos-->
+              <section class="products2">
+                <article class="product2">
+                  <div class="imagenes2">
+                    <img src="/images/pollo-curry.jpg" alt="PolloCurry" />
+                  </div>
+                  <div>
+                    <h3>Pollo Curry</h3>
+                    <p>Precio Unitario</p>
+                  </div>
+                  <div>
+                    <p class="precio-anterior">$4.00</p>
+                    <p class="descuento">10% off</p>
+                    <p>Subtotal</p>
+                    <p>$3.60</p>
+                    <p>Cebolla  cabezona,genjibre,ajo,curry amarillo en polvo,tomate y leche de coco</p>
+                  </div>
+                </article>
+                <!-- Tercer articulo-->
+                <article class="product2">
+                  <div class="imagenes2">
+                    <img src="/images/lasaña.jpg" alt="Lasaña" />
+                  </div>
+                  <div>
+                    <h3>Lasaña</h3>
+                    <p>Precio Unitario</p>
+                  </div>
+                  <div>
+                    <p class="precio-anterior">$4.00</p>
+                    <p class="descuento">10% off</p>
+                    <p>Subtotal</p>
+                    <p>$3.60</p>
+                    <p>Pechuga desmechada, tomates seleccionados, cebolla, pesto,hiervas aromatizantes</p>
+                  </div>
+                </article>
+              </section>
             </section>
       
       
