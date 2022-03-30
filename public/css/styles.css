@@ -1,0 +1,102 @@
+
+/*main*/
+.banner {
+   height: 14rem;
+    opacity: 0.8;
+    width: 100vw;
+}
+.banner-container {
+    position: relative;
+}
+.banner-container p {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+.oferta-p {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+}
+.descuento-p {
+    position: absolute;
+    top: 11rem;
+    right: 2rem;
+}
+section img {
+    width: 90%;
+    height: 18rem;
+    border-radius: 1rem;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+.titular {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+}
+.lasagna-pollo, .lasagna-vege {
+    display: none;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.6rem;
+}
+.producto {
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    width: 19rem;
+
+}
+.precio {
+    font-size: 1.6rem;
+}
+section i {
+    font-size: 2rem;
+}
+.productos-descuento {
+    margin-bottom: 5rem;
+}
+/*main*/
+footer {
+    position: static;
+}
+article {
+    transition: 400ms;
+}
+article:hover {
+    transform: scale(1.15);
+}
+/*Media querys*/
+/*Media query tablet*/
+@media (min-width: 481px) {
+    html {
+        font-size: 70%;
+    }
+}
+/*Media query dektop*/
+@media(min-width: 769px) {
+    html {
+        font-size: 80%
+    }
+    .banner {
+        height: 20rem;
+    }
+    .lasagna-pollo {
+        display: block;
+    }
+}
+/* media query desktop huge*/
+@media(min-width: 1280px){
+    .banner {
+        height: 30rem;
+    }
+    .lasagna-vege {
+        display: block;
+    }
+}
