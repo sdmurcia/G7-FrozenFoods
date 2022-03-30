@@ -118,5 +118,10 @@ width: 6vw;
       align-items: center;
         }
 }
-
+@media (min-width: 769px){
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
 /*Media query dektop*/

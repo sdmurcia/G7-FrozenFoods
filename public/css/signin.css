@@ -10,7 +10,10 @@ html{
 
 }*/
 
-
+footer{
+    position: absolute;
+    bottom: 0;
+}
 /*Cree esta media-querie para que en celulares, se oculté el texto de cada categoría*/
 @media (max-width: 360px){
     footer article{
