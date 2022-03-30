@@ -3,7 +3,7 @@
 .banner {
    height: 14rem;
     opacity: 0.8;
-    width: 100vw;
+    width: 100%;
 }
 .banner-container {
     position: relative;
