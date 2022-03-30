@@ -36,12 +36,13 @@ label {
     margin: 3rem 0;
 }
 .textos-guia{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     display: block;
-    margin: 1rem 0 0 0;
+    margin: 0.6rem 0 ;
     font-style: italic;
 
 }
+
 .cuadros-input{
     border: 1px solid #E0E2DB;
     border-radius: 0.5rem;
@@ -83,6 +84,18 @@ label {
     justify-content: center;
     align-items: center;
     }
-    .textosubrayado{
-        text-decoration: underline;
+.textosubrayado{
+    text-decoration: underline;
+}
+/* media querys tablet*/
+@media (min-width: 481px) {
+    html {
+        font-size: 70%;
     }
+}
+/*Media query dektop*/
+@media(min-width: 769px) {
+    html {
+        font-size: 80%
+    }
+}
