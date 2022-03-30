@@ -49,18 +49,38 @@ section{
 }
 .producto {
     border: 1px solid #d8d8d8;
+    border-radius: 0.4rem;
     text-align: center;
     width: 19rem;
 
 }
 .precio {
     font-size: 1.6rem;
+    color: #39b54a;
 }
 section i {
     font-size: 2rem;
 }
 .productos-descuento {
     margin-bottom: 5rem;
+}
+article button i {
+    font-size: 1.2rem;
+}
+article button {
+    font-size: 1.2rem;
+    background-color: #35858A;
+    color: #d8d8d8;
+    border-radius: 50%;
+    width: 4.3rem;
+    height: 4.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: 400ms;
+    margin-bottom: 0.5rem;
+}
+article button:hover {
+    color: blue;
 }
 /*main*/
 footer {

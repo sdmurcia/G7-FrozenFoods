@@ -67,6 +67,9 @@ header {
     margin: 0 0.5rem;
     font-size: 1.6rem ;
 }
+.user-container a {
+    font-size: 1.6rem;
+}
 .searcher {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
