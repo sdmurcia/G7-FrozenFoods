@@ -98,7 +98,7 @@ header i {
 
 /*footer*/
 footer {
-    margin: auto;
+    margin: auto auto 0 auto;
     width: 100%;
     background: rgba(234,232,232,0.5);
     opacity: 50%;
