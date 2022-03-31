@@ -1,70 +1,69 @@
-body{
-  display: flex;
-  min-height: 100vh;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
+
 
 /*main*/
-.imagenes{
-  width: 100%;
+.img-producto {
+  width: 30%;
 }
-article{
+p {
+  font-size: 1.6rem;
+}
+img {
+  width: 30%;
+  border-radius: 0.5rem;
+
+}
+.producto-container {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 3rem;
 }
-.productmain {
+.producto- {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+h2 {
   text-align: center;
 }
-.product2 {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.imagenes2{
-  width: 100px
-}
-h3 {
-  border: 1px solid #d8d8d8;
-  text-align: center;
-  width: 19rem;
-  align-self: center;
-}
-.descuento {
-  top: 11rem;
-  right: 2rem;
-}
-section img {
-  width: 17rem;
-  height: 20rem;
-  border-radius: 1rem;
+.cantidad input {
+  border-radius: 0.2rem;
+  width: 3rem;
 }
 section{
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
 }
-section .productsview{
+.producto img {
+  width: 100%;
+}
+.productos-destacados {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.otros {
+  text-align: center;
+  margin-top: 2rem;
+}
+.agregar {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-section .products2{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+i {
+  font-size: 1.4rem;
+  margin: 0.5rem;
 }
-.textoscarrito{
-  width:100%;
-  justify-content: center;
-    }
+.button-add {
+  background-color: #35858A;
+  color: #fff;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+}
 /*main*/
 /*footer*/
 footer{
