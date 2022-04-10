@@ -16,10 +16,10 @@ const usersController = {
     signIn: (req, res) => {
         res.render("signIn");
     },
-    signUp: () => {
+    signUp: (req,res) => {
         res.render("signUp")
     },
-    carrito: () => {
+    carrito: (req,res) => {
         res.render("carrito")
     }
 }

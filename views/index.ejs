@@ -15,26 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body class="estilo-body">
-    <header>
-        <a href="/"><div class="logo-container">
-            <p>Frozen</p>
-            <p>Foods</p>
-        </div>
-    </a>
-        <div class="menu-container">
-            <p>Menu</p>
-            <i class="fa-solid fa-angle-down"></i>
-        </div>
-        <div class="search-container">
-            <input type="text" class="searcher" placeholder=" Buscar... ">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-        <div class="user-container">
-            <a href="/carrito"><i class="fa-solid fa-cart-plus"></i></a>
-            <p><a href="/sign-in"> Mi cuenta</a></p>
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-    </header>
+    <!-- Header -->
+    <%- include('partials/header') %>
     <main>
         <div class="banner-container">
             <img src="./images/banner-2.jpg" alt="banner" class="banner">
@@ -139,37 +121,7 @@
         </section>
 
     </main>
-    <footer >
-        <section class="piedepagina">
-            <article>
-                
-            <h3>Tienda</h3>
-            <div class="textosfooter">
-            <p> Si tienes alguna duda puedes comunicarte con...</p>
-            <div class="iconosfooter">
-                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook iconos"></i></a>
-                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram iconos"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXX"><i class="fa-brands fa-whatsapp iconos"></i></a>
-            </div>
-            </div>            
-            </article>
-            <article>
-            <h3> FAQ </h3>
-            <div class="textosfooter">
-            <li><a href="">Cómo comprar</a></li>
-            <li><a href="">Zonas de entrega</a></li>
-            <li><a href="">Términos y condiciones</a></li>
-            </div>
-            </article>
-            <article>
-                <h3>Mi perfil</h3>
-            <div class="textosfooter">
-                <li><a href="/sign-in">Mi cuenta</a></li>
-                <li><a href="">Mis pedidos</a></li>
-            </div>
-            </article>
-        </section>
-        <h6>Copyright © 2022 Frozenfoods</h6>
-    </footer>
+    <!-- Footer -->
+    <%- include('partials/footer') %>
 </body>
 </html>
