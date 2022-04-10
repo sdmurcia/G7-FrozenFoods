@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/estructura.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <title>FrozenFoods/newProduct</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body class="estilo-body">
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <main>
+        <p class="aviso-bienvenida">Agregar producto</p>
+        <form action="#" method="POST" class="formulariosproduct">
+
+            <div class="textos-e-input">
+                <label for="idProduct" class="textos-guia">Escriba el id del producto:</label>
+                <input type="text" name="idProduct" id="idProduct" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productName" class="textos-guia">Escribe el nombre del producto:</label>
+                <input type="text" name="productName" id="productName" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productImage" class="textos-guia">Selecciona la imágen del producto:</label>
+                <input type="file" name="productImage" id="productImage" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productDescription" class="textos-guia">Escriba la descripción del producto:</label>
+                <input type="text" name="productDescription" id="productDescription" class="cuadros-input">
+            </div>
+
+
+
+            
+          
+            <div>
+                <a href="/"><button type="button" class="botonsignin">Crear producto
+
+                </button></a>
+            </div>
+            <div class="finalform">
+                <p>¿Quieres editar un producto existente?</p>   <a href="/product/editproduct" class="textosubrayado">Haz click aquí</a>
+            </div>
+    </form>
+    </main>
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>

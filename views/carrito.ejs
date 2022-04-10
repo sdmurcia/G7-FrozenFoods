@@ -21,13 +21,13 @@
    <%- include('partials/header') %>
     <main class="main-carrito">
         <section>
-
+            <% for (let i=6; i<=11; i++){ %>
             <article class="articulocarrito">
 
-                <Img class="imagen" src="/images/lentejas-coco.jpg" alt="lentejas">
+                <Img class="imagen" src=<%= Productos[i].image%> alt="lentejas">
 
                 <div class="textoscarrito">
-                    <h3 class="tituloscarrito">Sopa de lentejas al coco</h3>
+                    <h3 class="tituloscarrito"><%= Productos[i].producto%></h3>
 
                     <a class="eliminar" href="">Eliminar</a>
                 </div>
@@ -39,94 +39,12 @@
                         <i class="fa-solid fa-circle-plus"></i>
                     </p>
                 </div>
-                <p class="precios">$2.5</p>
+                <p class="precios">$<%= Productos[i].precio%></p>
 
 
             </article>
-            <article class="articulocarrito">
-
-                <Img class="imagen" src="/images/desmechada.jpg" alt="desmechada">
-
-                <div class="textoscarrito">
-                    <h3 class="tituloscarrito">Carne de res desmechada</h3>
-
-                    <a class="eliminar" href="">Eliminar</a>
-                </div>
-                <div class="cantidad">
-                    <p class="tituloscarrito">Cantidad</p>
-                    <p class="tituloscarrito">
-                        <i class="fa-solid fa-circle-minus"></i>
-                        2
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </p>
-                </div>
-                <p class="precios">$5</p>
-
-
-            </article>
-            <article class="articulocarrito">
-
-                <Img class="imagen" src="/images/pollo-curry.jpg" alt="Pollocurry">
-
-                <div class="textoscarrito">
-                    <h3 class="tituloscarrito">Pollo al curry</h3>
-
-                    <a class="eliminar" href="">Eliminar</a>
-                </div>
-                <div class="cantidad">
-                    <p class="tituloscarrito">Cantidad</p>
-                    <p class="tituloscarrito">
-                        <i class="fa-solid fa-circle-minus"></i>
-                        2
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </p>
-                </div>
-                <p class="precios">$8</p>
-
-
-            </article>
-            <article class="articulocarrito">
-
-                <Img class="imagen" src="/images/vege-blanc.jpg" alt="Vegetales">
-
-                <div class="textoscarrito">
-                    <h3 class="tituloscarrito">Vegetales blanqueados</h3>
-
-                    <a class="eliminar" href="">Eliminar</a>
-                </div>
-                <div class="cantidad">
-                    <p class="tituloscarrito">Cantidad</p>
-                    <p class="tituloscarrito">
-                        <i class="fa-solid fa-circle-minus"></i>
-                        1
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </p>
-                </div>
-                <p class="precios">$2</p>
-
-
-            </article>
-            <article class="articulocarrito">
-
-                <Img class="imagen" src="/images/pure-papa.jpg" alt="Pure">
-
-                <div class="textoscarrito">
-                    <h3 class="tituloscarrito">Pure de papa</h3>
-
-                    <a class="eliminar" href="">Eliminar</a>
-                </div>
-                <div class="cantidad">
-                    <p class="tituloscarrito">Cantidad</p>
-                    <p class="tituloscarrito">
-                        <i class="fa-solid fa-circle-minus"></i>
-                        4
-                        <i class="fa-solid fa-circle-plus"></i>
-                    </p>
-                </div>
-                <p class="precios">$6</p>
-
-
-            </article>
+            <%}%>
+            
 
 
 
@@ -144,40 +62,12 @@
             </div>
             <a href="/"><button type="button" class="botoncarrito">Finalizar compra</button></a>
         </section>
+        
+    
+        
     </main>
-    <footer>
-        <section class="piedepagina">
-            <article>
-
-                <h3>Tienda</h3>
-                <div class="textosfooter">
-                    <p> Si tienes alguna duda puedes comunicarte con...</p>
-                    <div class="iconosfooter">
-                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook iconos"></i></a>
-                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram iconos"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=XXXXXXXXXXX"><i
-                                class="fa-brands fa-whatsapp iconos"></i></a>
-                    </div>
-                </div>
-            </article>
-            <article>
-                <h3> FAQ </h3>
-                <div class="textosfooter">
-                    <li><a href="">Cómo comprar</a></li>
-                    <li><a href="">Zonas de entrega</a></li>
-                    <li><a href="">Términos y condiciones</a></li>
-                </div>
-            </article>
-            <article>
-                <h3>Mi perfil</h3>
-                <div class="textosfooter">
-                    <li><a href="/sign-in">Mi cuenta</a></li>
-                    <li><a href="">Mis pedidos</a></li>
-                </div>
-            </article>
-        </section>
-        <h6>Copyright © 2022 Frozenfoods</h6>
-    </footer>
+     <!-- Footer -->
+     <%- include('partials/footer') %>
 </body>
 
 </html>

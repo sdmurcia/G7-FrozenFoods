@@ -34,6 +34,10 @@ section{
   align-items: center;
   column-gap: 2rem;
 }
+.description{
+
+  width: 30vw;
+}
 .producto img {
   width: 100%;
 }
@@ -60,14 +64,10 @@ i {
   border-radius: 0.6rem;
   font-size: 1.8rem;
   padding: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 /*main*/
 /*footer*/
-footer{
-  position: static;
-  
-}
 .lasagna-pollo {
   display: none;
 }

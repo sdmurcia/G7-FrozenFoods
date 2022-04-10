@@ -1,30 +1,31 @@
-html{
+html {
     font-size: 62.5%;
 }
-*{
-    box-sizing: border-box; 
+
+* {
+    box-sizing: border-box;
     margin: 0px;
-    border: 0px;  
-   }
+    border: 0px;
+}
+
 /*.estilo-body{
 
 }*/
 
-footer{
-    position: absolute;
-    bottom: 0;
-}
+
 /*Cree esta media-querie para que en celulares, se oculté el texto de cada categoría*/
-@media (max-width: 360px){
-    footer article{
+@media (max-width: 360px) {
+    footer article {
         width: 80vw;
     }
-    .textosfooter{
+
+    .textosfooter {
         display: none;
     }
 }
+
 /*Formulario sign-in*/
-.aviso-bienvenida{
+.aviso-bienvenida {
     width: 100vw;
     display: block;
     text-align: center;
@@ -32,28 +33,32 @@ footer{
     font-size: 3rem;
     color: #889696;
 }
+
 label {
     font-size: 1.2rem;
 }
-.textos-e-input{
+
+.textos-e-input {
     margin: 3rem 0;
+    text-align: center;
 }
-.textos-guia{
+
+.textos-guia {
     font-size: 1.6rem;
     display: block;
-    margin: 0.6rem 0 ;
+    margin: 0.6rem 0;
     font-style: italic;
 
 }
 
-.cuadros-input{
+.cuadros-input {
     border: 1px solid #E0E2DB;
     border-radius: 0.5rem;
     padding: 3px 0px;
     width: 270px;
 }
 
-.botonsignin{
+.botonsignin {
     position: relative;
     display: block;
     font-size: 1.6rem;
@@ -64,8 +69,9 @@ label {
     border: none;
     border-radius: 10px;
     width: 270px;
-    }
-.formulariosign{
+}
+
+.formulariosign {
     position: relative;
     border: 0.3rem solid #5F7470;
     border-radius: 5rem;
@@ -73,29 +79,53 @@ label {
     display: block;
     margin: 2rem auto;
     padding: 1rem 0.5rem;
-        }
-.recordarme{
+}
+
+
+
+.recordarme {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
 }
-.finalform{
+
+.finalform {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    }
-.textosubrayado{
+}
+
+.textosubrayado {
     text-decoration: underline;
 }
+.formulariosproduct {
+    position: relative;
+    border: 0.3rem solid #5F7470;
+    border-radius: 5rem;
+    width: 35vw;
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+.lupa{
+    padding: 2px 4px 2px 4px;
+    color: black;
+    border-left: 1px solid #ebebeb;
+    background-color: white;
+    background-size: 1px;
+    text-align: center;
+    }
 /* media querys tablet*/
 @media (min-width: 481px) {
     html {
         font-size: 70%;
     }
 }
+
 /*Media query dektop*/
 @media(min-width: 769px) {
     html {

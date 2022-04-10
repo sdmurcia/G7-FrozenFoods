@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-}
+    }
 .estilo-body{
     height: 100vh;
     position: relative;
@@ -105,7 +105,7 @@ footer {
     box-shadow: inset 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
     padding: 10px;
     font-size: 1.2rem;
-    position: static;
+    position: absolute;
     bottom: 0;
     z-index: 3;
 }

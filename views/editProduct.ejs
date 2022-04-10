@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/estructura.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <title>FrozenFoods/editarproducto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body class="estilo-body">
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <main>
+        <p class="aviso-bienvenida">Agregar producto</p>
+        <form action="#" method="POST" class="formulariosproduct">
+
+            
+            <div class="textos-e-input">
+            <label for="idProduct" class="textos-guia">Busca por id, nombre, o descripción.</label>
+            <input type="text" class="cuadros-input">
+            <i class="fa-solid fa-magnifying-glass lupa"></i>
+        </div>
+
+            <div class="textos-e-input">
+                <label for="idProduct" class="textos-guia">id del producto:</label>
+                <input type="text" name="idProduct" id="idProduct" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productName" class="textos-guia">Nombre del producto:</label>
+                <input type="text" name="productName" id="productName" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productImage" class="textos-guia">imágen del producto:</label>
+                
+            </div>
+
+            <div class="textos-e-input">
+                <label for="productDescription" class="textos-guia">Descripción del producto:</label>
+                <input type="text" name="productDescription" id="productDescription" class="cuadros-input">
+            </div>
+
+
+
+            
+          
+            <div>
+                <a href="/"><button type="button" class="botonsignin">Guardar producto
+
+                </button></a>
+            </div>
+            <div class="finalform">
+                <p>¿Quieres crear un nuevo producto?</p>   <a href="/product/newproduct" class="textosubrayado">Haz click aquí</a>
+            </div>
+    </form>
+    </main>
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+</body>
+</html>
