@@ -34,12 +34,18 @@ section{
   align-items: center;
   column-gap: 2rem;
 }
+.producto {
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 19rem;
+
+}
 .description{
 
   width: 30vw;
 }
 .producto img {
-  width: 200px;
+  width: 100%;
 }
 .productos-destacados {
   margin-top: 2rem;
@@ -75,12 +81,13 @@ i {
   display: none;
 }
 /*Media query tablet*/
-@media (max-width: 481px){
-  footer {
-    position: absolute;
-    bottom: 0;
+
+@media (max-width: 481px) {
+  .img-producto {
+    width: 20rem;
   }
 }
+
 @media (min-width: 481px) {
   html {
       font-size: 70%;
