@@ -37,11 +37,9 @@ section{
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.8rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
-.lasagna-pollo, .lasagna-vege {
-    display: none;
-}
+
 
 .description {
     text-align: center;
@@ -51,7 +49,7 @@ section{
     border: 1px solid #d8d8d8;
     border-radius: 0.4rem;
     text-align: center;
-    width: 19rem;
+    margin: 2rem 0rem;
 
 }
 .precio {
@@ -61,7 +59,11 @@ section{
 section i {
     font-size: 2rem;
 }
-.productos-descuento {
+.seccion-productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: auto;
     margin-bottom: 5rem;
 }
 article button i {
@@ -98,6 +100,13 @@ article:hover {
     html {
         font-size: 70%;
     }
+    .seccion-productos{
+        width:  90vw;
+    }
+    .producto{
+        width: 40vw;
+    }
+
 }
 /*Media query dektop*/
 @media(min-width: 769px) {
@@ -107,8 +116,11 @@ article:hover {
     .banner {
         height: 20rem;
     }
-    .lasagna-pollo {
-        display: block;
+    .seccion-productos{
+        width: 80vw;
+    }
+    .producto{
+        width: 30vw;
     }
 }
 /* media query desktop huge*/
@@ -116,7 +128,10 @@ article:hover {
     .banner {
         height: 30rem;
     }
-    .lasagna-vege {
-        display: block;
+    .seccion-productos{
+        width: 70vw;
+    }
+    .producto{
+        width: 15vw;
     }
 }

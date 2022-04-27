@@ -1,4 +1,4 @@
-const listaProductos=require('./Listaproductos');
+const listaProductos=require('../data/Listaproductos');
 
 const productController = {
     'product': (req,res) => {

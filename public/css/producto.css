@@ -8,7 +8,19 @@ p {
   font-size: 1.6rem;
 }
 
-
+.producto {
+  border: 1px solid #d8d8d8;
+  border-radius: 0.4rem;
+  text-align: center;
+  margin: 2rem 0rem;
+}
+.seccion-productos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 5rem;
+}
 .producto-container {
   display: flex;
   align-items: center;
@@ -40,10 +52,7 @@ section{
   width: 19rem;
 
 }
-.description{
 
-  width: 30vw;
-}
 .producto img {
   width: 100%;
 }
