@@ -9,6 +9,7 @@ const cookieParser = require('cookie-parser');
 
 //URL encode  - para usar req.body
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 //Middleware de aplicación, para usar delete y put
 app.use(methodOverride('_method'));
 
