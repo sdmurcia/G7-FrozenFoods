@@ -20,14 +20,14 @@
   <%- include('partials/header') %>
     <main>
       <section class="producto-container">
-        <img src=<%=productDetail.image %> alt="bbq" class="img-producto">
+        <img src="/images/<%=productDetail.image %>" alt='bbq' class="img-producto">
         <article class="producto-">
           <div class="description">
 
             <h2>
               <%= productDetail.producto %>
-              <br>
-              <br>
+                <br>
+                <br>
             </h2>
             <p>
               <%= productDetail.descripcion %>
@@ -37,8 +37,8 @@
           </div>
           <hr>
           <p>Precio: $<%= productDetail.precio %>
-            <br>
-            <br>
+              <br>
+              <br>
           </p>
           <div class="agregar">
             <i class="fa-solid fa-plus"></i>
@@ -46,51 +46,72 @@
             <div class="cantidad">
               <h3>cantidad</h3>
               <input type="text">
-            
+
             </div>
           </div>
           <br>
           <br>
           <button class="button-add">Agregar</button>
-        </article>
-      <div>Editar producto</div>
-
-      <form action="#" method="post">
-      <button type="submit">Eliminar</button>
         
-      </form>
-    </section>
-    <aside class="productos-relacionados">
-      <h2 class="otros">Productos relacionados</h2>
-      <section class="seccion-productos">
-        <i class="fa-solid fa-angle-left"></i>
-        <article class="producto">
-          <img src=<%= Productos[8].image%> alt="albondigas">
-          <p class="description"> <%= Productos[8].producto %></p>
-          <p class="precio">$<%= Productos[8].precio %></p>
-          </a>
-        </article>
-        <article class="producto">
-          <img src=<%= Productos[9].image %> alt="alitas">
-          <p class="description"> <%= Productos[9].producto %></p>
-          <p class="precio">$<%= Productos[9].precio %></p>
-          </a>
-        </article>
-        <article class="producto">
-          <img src=<%= Productos[10].image %> alt="alitas">
-          <p class="description"><%= Productos[10].producto %></p>
-          <p class="precio">$<%= Productos[10].precio %></p>
-          </a>
-        </article>
-        <article class="producto">
-          <img src=<%= Productos[11].image %> alt="lasagna-vege">
-          <p class="description"><%= Productos[11].producto %></p>
-          <p class="precio">$<%= Productos[11].precio %></p>
-        </article>
-        <i class="fa-solid fa-angle-right"></i>
-    </aside>
-    </section>
-      
+
+        <div class="botones-producto">
+          <a href="/product/editproduct/<%= productDetail.id%>">
+          <div class="boton-editar">Editar producto</div>
+        </a>
+          <form action="/product/editproduct/<%=productDetail.id%>?_method=DELETE" method="POST">
+            <button type="submit" class="boton-eliminar">Eliminar</button>
+          </form>
+        </div>
+      </article>
+      </section>
+      <aside class="productos-relacionados">
+        <h2 class="otros">Productos relacionados</h2>
+        <section class="seccion-productos">
+          <i class="fa-solid fa-angle-left"></i>
+          <a href="/product/detalle/<%=Productos[8].id%>">
+          <article class="producto">
+            <img src="/images/<%=Productos[8].image %>" alt="albondigas">
+            <p class="description">
+              <%= Productos[8].producto %>
+            </p>
+            <p class="precio">$<%= Productos[8].precio %>
+            </p>
+            </a>
+          </article>
+          <a href="/product/detalle/<%=Productos[9].id%>">
+          <article class="producto">
+            <img src="/images/<%=Productos[9].image %>" alt="alitas">
+            <p class="description">
+              <%= Productos[9].producto %>
+            </p>
+            <p class="precio">$<%= Productos[9].precio %>
+            </p>
+            </a>
+          </article>
+          <a href="/product/detalle/<%=Productos[10].id%>">
+            <article class="producto">
+              <img src="/images/<%=Productos[10].image %>" alt="alitas">
+              <p class="description">
+                <%= Productos[9].producto %>
+              </p>
+              <p class="precio">$<%= Productos[10].precio %>
+              </p>
+              </a>
+            </article>
+            <a href="/product/detalle/<%=Productos[11].id%>">
+              <article class="producto">
+                <img src="/images/<%=Productos[11].image %>" alt="alitas">
+                <p class="description">
+                  <%= Productos[9].producto %>
+                </p>
+                <p class="precio">$<%= Productos[11].precio %>
+                </p>
+                </a>
+              </article>
+          <i class="fa-solid fa-angle-right"></i>
+      </aside>
+      </section>
+
     </main>
     <!-- Footer -->
     <%- include('partials/footer') %>

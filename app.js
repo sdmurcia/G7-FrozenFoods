@@ -29,13 +29,13 @@ app.set('view engine','ejs')
 const indexRouter = require('./routes/index');
 const productRouter = require("./routes/product");
 const usersRouter = require("./routes/users");
-const carritoRouter = require("./routes/carrito")
+
 
 //rutas
 app.use("/", indexRouter);
 app.use("/product", productRouter);
 app.use("/users", usersRouter);
-app.use("/carrito", carritoRouter);
+
 
 //Levantar servidor en puerto 3050
 const port = 3050;

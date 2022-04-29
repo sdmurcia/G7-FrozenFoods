@@ -23,6 +23,12 @@ html {
         display: none;
     }
 }
+.flex-editarproducto{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
 
 /*Formulario sign-in*/
 .aviso-bienvenida {
@@ -97,7 +103,16 @@ label {
     justify-content: center;
     align-items: center;
 }
-
+.img-producto-editar{
+    width:15rem;
+}
+.imagen-editar{
+    width:40%;
+}
+.textos-editar{
+    width: 40%;
+    text-align: center;
+}
 .textosubrayado {
     text-decoration: underline;
 }
@@ -119,6 +134,9 @@ label {
     background-size: 1px;
     text-align: center;
     }
+.img-producto-editar{
+
+}
 /* media querys tablet*/
 @media (min-width: 481px) {
     html {
