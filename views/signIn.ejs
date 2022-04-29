@@ -18,11 +18,11 @@
     <%- include('partials/header') %>
     <main>
         <p class="aviso-bienvenida">¡Bienvenido!</p>
-        <form action="#" method="POST" class="formulariosign">
+        <form action="/signIn" method="POST" class="formulariosign" enctype="multipart/form-data">
 
             <div class="textos-e-input">
-                <label for="usuario" class="textos-guia">Escribe tu usuario:</label>
-                <input type="text" name="usuario" id="usuario" class="cuadros-input">
+                <label for="usuario" class="textos-guia">Escribe tu email:</label>
+                <input type="email" name="usuario" id="usuario" class="cuadros-input">
             </div>
 
             <div class="textos-e-input">

@@ -1,13 +1,13 @@
-**El grupo ha trabajado bien, aun hay que tener una mayor interaccion en la retroalimentacion de los diferentes aportes de cada integrante, lo que se logro en los ultimos dias previos a la entrega del Sprint. A continuación se muestra la aplicación de la metodología estrella de mar:**
+**El grupo ha trabajado bien, aun hay que tener una mayor interacción en la retroalimentación de los diferentes aportes de cada integrante, lo que se logró en los últimos días previos a la entrega del Sprint. A continuación, se muestra la aplicación de la metodología estrella de mar:**
 
 ## Para empezar a hacer:
-* Mas comunicacion del grupo por mensajeria instantanea y retroalimentacion de la funcion que desempeña.
-* Establecer las tareas de cada uno cerca a las fechas del lanzamiento del sprint.
+* Mas comunicación del grupo por mensajería instantánea y retroalimentación de la función que desempeña.
+* Establecer las tareas de cada uno cerca de las fechas del lanzamiento del sprint.
 ## Más de:
-* Revisisón más profunda del código propuesto por los integrantes.
+* Revisión más profunda del código propuesto por los integrantes.
 ## Seguir haciendo:
 * El trabajo delegado.
-* Retroalimentacion y revision del grupo de las funciones de cada uno.
+* Retroalimentación y revisión del grupo de las funciones de cada uno.
 ## Menos de:
 * Aplazar las fechas de las entregas.
 ## Dejar de hacer:

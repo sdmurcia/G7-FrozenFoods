@@ -18,11 +18,21 @@
     <%- include('partials/header') %>
     <main>
         <p class="aviso-bienvenida">¡Bienvenido!</p>
-        <form action="#" method="POST" class="formulariosign">
+        <form action="/users/signUp" method="POST" class="formulariosign">
 
             <div class="textos-e-input">
-                <label for="usuario" class="textos-guia">Escribe tu usuario:</label>
-                <input type="text" name="usuario" id="usuario" class="cuadros-input">
+                <label for="email" class="textos-guia">Escribe tu email:</label>
+                <input type="email" name="email" id="email" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="name" class="textos-guia">Escribe tu nombre:</label>
+                <input type="text" name="name" id="name" class="cuadros-input">
+            </div>
+
+            <div class="textos-e-input">
+                <label for="last_name" class="textos-guia">Escribe tu apellido:</label>
+                <input type="text" name="last_name" id="last-name" class="cuadros-input">
             </div>
 
             <div class="textos-e-input">
@@ -38,9 +48,7 @@
             
           
             <div>
-                <a href="/"><button type="button" class="botonsignin">Regístrate
-
-                </button></a>
+                <button type="submit" class="botonsignin">Regístrate</button>
             </div>
             <div class="finalform">
                 <p>¿Ya tienes una cuenta?</p>   <a href="/users/signIn" class="textosubrayado">Ingresa aquí</a>
