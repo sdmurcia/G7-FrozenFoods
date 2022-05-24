@@ -9,3 +9,8 @@
 * Inicio de labores correspondientes a cada integrante.
 # Semana 9-15 de Mayo
 * Resolucion de dudas e inquietudes acerca de los middleware y detalles del desarrollo del codigo.
+# Semana 16-22 de Mayo
+* Desarrollo de la mayoria de las tareas y entregables del Sprint.
+* Correciones y retroalimentacion de los diferentes desafios del Sprint.
+# Semana 23 de Mayo
+* Ultimos arreglos e inclusion de todos los detalles en el Github requeridos en el Sprint.
