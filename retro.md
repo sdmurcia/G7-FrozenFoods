@@ -1,14 +1,12 @@
-**El grupo ha trabajado bien, aun hay que tener una mayor interacción en la retroalimentación de los diferentes aportes de cada integrante, lo que se logró en los últimos días previos a la entrega del Sprint. A continuación, se muestra la aplicación de la metodología estrella de mar:**
+**El grupo ha trabajado bien, hay que resolver constantemente dudas acerca de la tematica de Middleware, pero se ha progresado en el proyecto. A continuación, se muestra la aplicación de la metodología estrella de mar:**
 
 ## Para empezar a hacer:
-* Mas comunicación del grupo por mensajería instantánea y retroalimentación de la función que desempeña.
-* Establecer las tareas de cada uno cerca de las fechas del lanzamiento del sprint.
+* Sacar mas provecho de las reuniones en clase.
 ## Más de:
-* Revisión más profunda del código propuesto por los integrantes.
+* Revisión y comunicacion de las dudas y desafios del Sprint.
 ## Seguir haciendo:
-* El trabajo delegado.
-* Retroalimentación y revisión del grupo de las funciones de cada uno.
+* Interacción del grupo por mensajería instantánea y retroalimentación de la función que desempeña.
 ## Menos de:
-* Aplazar las fechas de las entregas.
+* Divagar sobre temas que no aportan al proyecto.
 ## Dejar de hacer:
-* Asignar las funciones muy cerca a la fecha de entrega.
+* No resolver las dudas de lo que se dificulta para la entrega del Sprint durante la clase.
