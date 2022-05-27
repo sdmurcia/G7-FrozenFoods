@@ -24,8 +24,6 @@ const mainController = {
         let listaProductos=leerJSON();
         let ultimosVisitados=listaProductos.filter(productos=>productos.Visitados=="Si");
         let enOferta=listaProductos.filter(productos=>productos.descuento!="0" && productos.descuento!="");
-           
-        
         res.render("index", {'Productos':listaProductos, 'visitados':ultimosVisitados, 'enOferta':enOferta});
     },
 };

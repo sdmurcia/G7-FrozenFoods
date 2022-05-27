@@ -18,31 +18,80 @@
     <%- include('partials/header') %>
     <main>
         <p class="aviso-bienvenida">¡Bienvenido!</p>
-        <form action="/users/signUp" method="POST" class="formulariosign">
+        <!--<% if(locals.errors){%>
+            <% for(let oneError in errors){%>
+                <p><%= errors[oneError].msg%></p>
+                <% } %>
+        <% } %> -->
+        <form action="/users/signUp" method="POST" class="formulariosign" enctype="multipart/form-data">
 
             <div class="textos-e-input">
                 <label for="email" class="textos-guia">Escribe tu email:</label>
-                <input type="email" name="email" id="email" class="cuadros-input">
+                <input type="email" 
+                name="email" 
+                id="email" 
+                class="cuadros-input <%= locals.errors && errors.email ? 'is-invalid': null  %>"
+                value="<%= locals.oldData ? oldData.email :null %>">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-error">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="textos-e-input">
                 <label for="name" class="textos-guia">Escribe tu nombre:</label>
-                <input type="text" name="name" id="name" class="cuadros-input">
+                <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                class="cuadros-input <%= locals.errors && errors.name ? 'is-invalid': null  %>"
+                value="<%= locals.oldData ? oldData.name :null %>">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-error">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="textos-e-input">
                 <label for="last_name" class="textos-guia">Escribe tu apellido:</label>
-                <input type="text" name="last_name" id="last-name" class="cuadros-input">
+                <input 
+                type="text" 
+                name="last_name" 
+                id="last-name" 
+                class="cuadros-input <%= locals.errors && errors.last_name ? 'is-invalid': null  %>"
+                value="<%= locals.oldData ? oldData.last_name :null %>">
+                <% if (locals.errors && errors.last_name) { %>
+                    <div class="text-error">
+                        <%= errors.last_name.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="textos-e-input">
-                <label for="contraseña" class="textos-guia">Escribe tu contraseña:</label>
-                <input type="password" name="password" id="contraseña" class="cuadros-input">
+                <label for="avatar" class="textos-guia">Selecciona tu avatar:</label>
+                <input type="file" name="avatar" id="avatar" class="cuadros-input">
             </div>
 
             <div class="textos-e-input">
-                <label for="contraseñaconf" class="textos-guia">Confirma tu contraseña:</label>
-                <input type="password" name="passwordconf" id="contraseñaconf" class="cuadros-input">
+                <label for="password" class="textos-guia">Escribe tu contraseña:</label>
+                <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                class="cuadros-input <%= locals.errors && errors.password ? 'is-invalid': null  %>"
+                
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-error">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="textos-e-input">
+                <label for="passwordconf" class="textos-guia">Confirma tu contraseña:</label>
+                <input type="password" name="passwordconf" id="passwordconf" class="cuadros-input">
             </div>
 
             
