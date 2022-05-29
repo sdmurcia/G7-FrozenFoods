@@ -32,16 +32,33 @@
                     </div>
 
                     <div class="textos-e-input">
+                  
                         <label for="productCategory" class="textos-guia">Categoría del producto:</label>
                         <select name="productCategory" id="productCategory" class="cuadros-input">
+                            
+
                         <option value="">Seleccione una opción</option>
-                        <option value="Acompañamientos">Acompañamientos</option>
-                        <option value="Vegetariano">Vegetariano</option>
-                        <option value="Arroces">Arroces</option>
-                        <option value="Carnes">Carne, pollo y pescado</option>
-                        <option value="Cremas, sopas y cazuelas">Cremas, sopas y cazuelas</option>
-                        <option value="Postres">Postres</option>
+                        <%
+                        let categorias = ['Acompañamientos','Vegetariano','Arroces','Carnes','Cremas, sopas y cazuelas','Postres'];
+                        %>
+                        <% for (const categoria of categorias){%>
+                            <option value="<%= categoria %>"
+                                <% if(locals.oldData){ %>
+                                <%=  oldData.productCategory===categoria? 'selected':null %>
+                                    
+                                <% }else {%>
+                                <%=   productDetail.categoria===categoria? 'selected':null %>
+                                
+                                    <% } %>
+                                ><%= categoria %>
+                            </option>
+                        <%}%>
                         </select>
+                        <% if(locals.errors && errors.productCategory){ %>
+                            <div class="texto-error">
+                                <%= errors.productCategory.msg %>
+                            </div>
+                        <% } %>
                     </div>
                 </div>
 
@@ -54,48 +71,45 @@
                         <!--<% if(productDetail.producto) { %>
                             <input type="text" name="productName" id="productName" class="cuadros-input" value=" <%= productDetail.producto %> ">
                         <% } %>-->
-                        <input type="text" name="productName" id="productName" class="cuadros-input" value=
-                        <% if(productDetail.producto){ %> 
-                            "<%=productDetail.producto%>"
-                        <% }else{ %> 
-                         ""
-                        <% }  %>
-                        >
+                        <input type="text" name="productName" id="productName" class="cuadros-input"
+                        value= "<% if(locals.oldData) {%><%=oldData.productName%><%} else {%><%=productDetail.producto%><%} %>">
+                        <% if(locals.errors && errors.productName){ %>
+                            <div class="texto-error">
+                                <%= errors.productName.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
 
 
                     <div class="textos-e-input">
                         <label for="productDescription" class="textos-guia">Descripción del producto:</label>
-                        <textarea type="text" name="productDescription" id="productDescription" class="cuadros-input">     
-                            <% if(productDetail.descripcion){ %> 
-                                <%=productDetail.descripcion%>
-                            <% }else{ %> 
-                             ""
-                            <% }  %>
-                    </textarea>
+                        <textarea type="text" name="productDescription" id="productDescription" class="cuadros-input"><% if(locals.oldData) {%><%=oldData.productDescription%><%} else {%><%=productDetail.descripcion%><%} %></textarea>
+                            <% if(locals.errors && errors.productDescription){ %>
+                                <div class="texto-error">
+                                    <%= errors.productDescription.msg %>
+                                </div>
+                            <% } %>
                     </div>
 
                     <div class="textos-e-input">
                         <label for="productPrice" class="textos-guia">Precio del producto:</label>
-                        <input type="number" name="productPrice" id="productPrice" class="cuadros-input" value=
-                        <% if(productDetail.precio){ %> 
-                            <%=productDetail.precio%>
-                        <% }else{ %> 
-                         ""
-                        <% }  %>
-                        >
+                        <input type="number" name="productPrice" id="productPrice" class="cuadros-input" value=<% if(locals.oldData) {%><%=oldData.productPrice%><%} else {%><%=productDetail.precio%><%} %>>
+                        <% if(locals.errors && errors.productPrice){ %>
+                            <div class="texto-error">
+                                <%= errors.productPrice.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="textos-e-input">
                         <label for="productDiscount" class="textos-guia">Descuento del producto:</label>
-                        <input type="number" name="productDiscount" id="productDiscount" class="cuadros-input" value=
-                        <% if(productDetail.descuento){ %> 
-                            <%=productDetail.descuento%>
-                        <% }else{ %> 
-                         ""
-                        <% }  %>
-                        >
+                        <input type="number" name="productDiscount" id="productDiscount" class="cuadros-input" value=<% if(locals.oldData) {%><%=oldData.productDiscount%><%} else {%><%=productDetail.descuento%><%} %>>
+                        <% if(locals.errors && errors.productDiscount){ %>
+                            <div class="texto-error">
+                                <%= errors.productDiscount.msg %>
+                            </div>
+                        <% } %>
                     </div>
 
                 </div>

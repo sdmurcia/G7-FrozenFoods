@@ -135,7 +135,13 @@ label {
     background-color: white;
     background-size: 1px;
     text-align: center;
-}
+    }
+    .texto-error{
+        color: red;
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 0;
+       }
 .text-error {
     font-size: 1.4rem;
     color: rgb(251, 84, 24);
