@@ -134,9 +134,12 @@ label {
     background-size: 1px;
     text-align: center;
     }
-.img-producto-editar{
-
-}
+    .texto-error{
+        color: red;
+        text-align: left;
+        font-size: 1.2rem;
+        margin: 0;
+       }
 /* media querys tablet*/
 @media (min-width: 481px) {
     html {

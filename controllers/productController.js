@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let leerJSON = () => {
@@ -37,7 +38,9 @@ const productController = {
         res.render("newProduct")
     },
     'saveNewProduct': (req, res) => {
-        if (req.file) {
+        const errors = validationResult(req);
+
+        if (errors.isEmpty()) {
             let listaProductos = leerJSON();
             let decision = ['Si', 'No'];
             function getRandomInt(max) {
@@ -60,8 +63,9 @@ const productController = {
             let idProducto = nuevoProducto.id;
             res.redirect(`/product/detalle/${idProducto}`);
         } else {
-            res.redirect(`/product/newproduct`);
+            res.render("newProduct", { oldData: req.body, errors: errors.mapped() });
         }
+
     },
 
 
@@ -70,45 +74,50 @@ const productController = {
         let listaProductos = leerJSON();
         let producto = listaProductos.find(productos => productos.id == req.params.productId);
         res.render("editProduct", { 'productDetail': producto })
+
     },
 
     'updateProduct': (req, res) => {
-        console.log(req.body.productName);
-        console.log(req.body.productDescription);
-        console.log(req.body.productDiscount);
-        console.log(req.body.productCategory);
+        const errors = validationResult(req);
+        let listaProductos = leerJSON();
+        console.log(errors.isEmpty());
+        if (errors.isEmpty()) {
+            
+            let index = listaProductos.findIndex(producto => producto.id == req.params.productId);
+            listaProductos[index].producto = req.body.productName;
+            listaProductos[index].descripcion = req.body.productDescription;
+            listaProductos[index].precio = req.body.productPrice;
+            listaProductos[index].descuento = req.body.productDiscount;
+            listaProductos[index].categoria = req.body.productCategory;
 
+            if (req.file) {
+                listaProductos[index].image = req.file.filename
+
+            } else {
+                listaProductos[index].image = listaProductos[index].image;
+            }
+            let productsJSON = JSON.stringify(listaProductos, null, 4)
+            fs.writeFileSync(productsFilePath, productsJSON)
+            let idProducto = listaProductos[index].id
+            
+            res.redirect(`/product/detalle/${idProducto}`);
+        } else {
+            let producto = listaProductos.find(productos => productos.id == req.params.productId);
+            res.render("editProduct", { errors: errors.mapped(), oldData: req.body,'productDetail': producto })
+        }
+    },
+    'destroy': (req, res) => {
         let listaProductos = leerJSON();
         let index = listaProductos.findIndex(producto => producto.id == req.params.productId);
-        listaProductos[index].producto = req.body.productName;
-        listaProductos[index].descripcion = req.body.productDescription;
-        listaProductos[index].precio = req.body.productPrice;
-        listaProductos[index].descuento = req.body.productDiscount;
-        listaProductos[index].categoria = req.body.productCategory;
-
-        if (req.file) {
-            listaProductos[index].image = req.file.filename
-
-        } else {
-            listaProductos[index].image = listaProductos[index].image;
-        }
+        listaProductos.splice(index, 1);
         let productsJSON = JSON.stringify(listaProductos, null, 4)
-        fs.writeFileSync(productsFilePath, productsJSON)
-        let idProducto = listaProductos[index].id
-        res.redirect(`/product/detalle/${idProducto}`);
-    },
-    'destroy': (req,res)=>{
-        let listaProductos=leerJSON();
-		let index = listaProductos.findIndex(producto => producto.id == req.params.productId);
-	    listaProductos.splice(index,1);
-		let productsJSON=JSON.stringify(listaProductos, null, 4)
-		fs.writeFileSync(productsFilePath,productsJSON);
-		res.redirect("/product/allproducts");
+        fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect("/product/allproducts");
     },
     'carrito': (req, res) => {
-        let listaProductos=leerJSON();
-        res.render("carrito", {'Productos':listaProductos});
-        
+        let listaProductos = leerJSON();
+        res.render("carrito", { 'Productos': listaProductos });
+
     }
 }
 
