@@ -170,5 +170,18 @@
     "apellido": "Bailoyo",
     "email": "aquiles@hotmail.com",
     "password": "123456"
+  },
+  {
+    "nombre": "aitor",
+    "apellido": "tas",
+    "email": "aitor@gmail.com",
+    "password": "123456"
+  },
+  {
+    "nombre": "elma",
+    "apellido": "rrano",
+    "avatar": "1653639303450_img.jpg",
+    "email": "elma@gmal.com",
+    "password": "123456"
   }
 ]

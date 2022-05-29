@@ -62,6 +62,8 @@ label {
     border-radius: 0.5rem;
     padding: 3px 0px;
     width: 270px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
 }
 
 .botonsignin {
@@ -133,6 +135,7 @@ label {
     background-color: white;
     background-size: 1px;
     text-align: center;
+<<<<<<< HEAD
     }
     .texto-error{
         color: red;
@@ -140,6 +143,20 @@ label {
         font-size: 1.2rem;
         margin: 0;
        }
+=======
+}
+.text-error {
+    font-size: 1.4rem;
+    color: rgb(251, 84, 24);
+}
+.is-invalid {
+    border: solid 1px red;
+}
+
+.img-producto-editar{
+
+}
+>>>>>>> 87346e777e57298aab01f1f62d5638602c9ad357
 /* media querys tablet*/
 @media (min-width: 481px) {
     html {
