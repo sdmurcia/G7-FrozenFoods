@@ -144,9 +144,6 @@ label {
     border: solid 1px red;
 }
 
-.img-producto-editar{
-
-}
 /* media querys tablet*/
 @media (min-width: 481px) {
     html {

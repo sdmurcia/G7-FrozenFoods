@@ -1,7 +1,8 @@
 const res = require("express/lib/response");
 const fs = require("fs");
-const bcrypt = require("bcryptjs");
+const bcryptjs = require("bcryptjs");
 const path = require("path");
+const User = require('../models/Users')
 
 //función que trae los errores desde la ruta.
 const { validationResult } = require("express-validator");
@@ -23,48 +24,63 @@ const usersController = {
         errors: resultValidation.mapped(),
         oldData: req.body
       })
-    }else{
-      let user = {
-        nombre: req.body.name,
-        apellido: req.body.last_name,
-        avatar: req.file.filename,
-        email: req.body.email,
-        password: req.body.password,
-      };
-      console.log(user);
-      let archivoUsers = fs.readFileSync(
-        path.resolve(__dirname, "../data/users.json"),
-        {
-          encoding: "utf-8",
-        }
-      );
-      let users;
-      if (archivoUsers == "") {
-        users = [];
-      } else {
-        users = JSON.parse(archivoUsers);
-      }
-  
-      users.push(user);
-      usersJSON = JSON.stringify(users, null, 2);
-      fs.writeFileSync(path.resolve(__dirname, "../data/users.json"), usersJSON);
-      res.redirect("/users/signIn");
     }
+    let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render('userRegisterForm', {
+				errors: {
+					email: {
+						msg: 'Este email no esta disponible'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
+		let userToCreate = {
+			...req.body,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			avatar: req.file.filename
+		}
+
+		let userCreated = User.create(userToCreate);
+
+		return res.redirect('/users/signIn');
+
   },
   access: (req, res) => {
-    //const errors = validationResult(req);
-    //return res.send(errors.mapped());
+    let userToLogin = User.findByField('email', req.body.email);
+		
+		if(userToLogin) {
+			let passwordCompare = bcryptjs.compareSync(req.body.password, userToLogin.password);
+			if (passwordCompare) {
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+				return res.redirect('/users/profile');
+			} 
+			return res.render('signIn', {
+				errors: {
+					email: {
+						msg: 'Las credenciales son incorrectas'
+					}
+				}
+			});
+		}
 
-    let archivoUsuarios = JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, "../data/users.json"))
-    );
-    let usuarioLogueado = archivoUsuarios.find(
-      (usuario) => usuario.email == req.body.email
-    );
-    //return res.send(usuarioLogueado);
-    req.session.usuario = usuarioLogueado; //Guardar del lado del servidor
-    return res.redirect("/");
+		return res.render('signIn', {
+			errors: {
+				email: {
+					msg: 'email no registrado'
+				}
+			}
+		});
   },
+  profile: (req, res) => {
+		return res.render('profile', {
+			user: req.session.userLogged
+		});
+	},
 };
 
 module.exports = usersController;
