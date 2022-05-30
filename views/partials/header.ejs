@@ -14,10 +14,14 @@
     </div>
     <div class="user-container">
         <a href="/product/carrito"><i class="fa-solid fa-cart-plus"></i></a>
-        <!--<% if (locals.usuario != 'undefined'){%>
-            <p<%= locals.usuario%>></p>
-        <% } %> -->
-        <p><a href="/users/signIn"> Mi cuenta</a></p>
+        <% if (locals.isLogged){%>
+                  
+        <p><a href="/users/profile"> Mi cuenta</a></p>
         <i class="fa-solid fa-user"></i>
+        <p><a href="/users/logout"> Cerrar sesión</a></p>
+       <%} else {%>
+        <p><a href="/users/signIn"> Iniciar sesión</a></p>
+        <p><a href="/users/signUp"> Registrarme</a></p>
+        <% } %> 
     </div>
 </header>

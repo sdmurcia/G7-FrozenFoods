@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require("method-override")
-
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 //requiero los paquetes para trabajar con session y cookies
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -16,10 +16,12 @@ app.use(methodOverride('_method'));
 //requerimos middlewares de session y cookies
 app.use(session({
   secret : 'topSecret',
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
 }))
 app.use(cookieParser());
+
+app.use(userLoggedMiddleware);
 
 //declaramos archivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));;

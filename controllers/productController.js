@@ -26,16 +26,16 @@ const productController = {
         let postres = listaProductos.filter(productos => productos.categoria == "Postres");
 
 
-        res.render("allProducts", { 'acompanamientos': acompanamientos, 'arroces': arroces, 'carnes': carnes, 'vegetariano': vegetariano, 'sopas': sopas, 'postres': postres, 'Productos': listaProductos });
+       return res.render("allProducts", { 'acompanamientos': acompanamientos, 'arroces': arroces, 'carnes': carnes, 'vegetariano': vegetariano, 'sopas': sopas, 'postres': postres, 'Productos': listaProductos });
     },
     'product': (req, res) => {
         let listaProductos = leerJSON();
         let producto = listaProductos.find(productos => productos.id == req.params.productId);
         /*console.log(listaProductos);*/
-        res.render("product", { 'productDetail': producto, 'Productos': listaProductos });
+       return res.render("product", { 'productDetail': producto, 'Productos': listaProductos });
     },
     'newProduct': (req, res) => {
-        res.render("newProduct")
+        return res.render("newProduct")
     },
     'saveNewProduct': (req, res) => {
         const errors = validationResult(req);
@@ -61,9 +61,9 @@ const productController = {
             let productsJSON = JSON.stringify(listaProductos, null, 4);
             fs.writeFileSync(productsFilePath, productsJSON);
             let idProducto = nuevoProducto.id;
-            res.redirect(`/product/detalle/${idProducto}`);
+            return res.redirect(`/product/detalle/${idProducto}`);
         } else {
-            res.render("newProduct", { oldData: req.body, errors: errors.mapped() });
+            return res.render("newProduct", { oldData: req.body, errors: errors.mapped() });
         }
 
     },
@@ -73,14 +73,14 @@ const productController = {
     'editProduct': (req, res) => {
         let listaProductos = leerJSON();
         let producto = listaProductos.find(productos => productos.id == req.params.productId);
-        res.render("editProduct", { 'productDetail': producto })
+        return res.render("editProduct", { 'productDetail': producto })
 
     },
 
     'updateProduct': (req, res) => {
         const errors = validationResult(req);
         let listaProductos = leerJSON();
-        console.log(errors.isEmpty());
+
         if (errors.isEmpty()) {
             
             let index = listaProductos.findIndex(producto => producto.id == req.params.productId);
@@ -100,10 +100,10 @@ const productController = {
             fs.writeFileSync(productsFilePath, productsJSON)
             let idProducto = listaProductos[index].id
             
-            res.redirect(`/product/detalle/${idProducto}`);
+            return res.redirect(`/product/detalle/${idProducto}`);
         } else {
             let producto = listaProductos.find(productos => productos.id == req.params.productId);
-            res.render("editProduct", { errors: errors.mapped(), oldData: req.body,'productDetail': producto })
+            return res.render("editProduct", { errors: errors.mapped(), oldData: req.body,'productDetail': producto })
         }
     },
     'destroy': (req, res) => {
@@ -112,11 +112,11 @@ const productController = {
         listaProductos.splice(index, 1);
         let productsJSON = JSON.stringify(listaProductos, null, 4)
         fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect("/product/allproducts");
+        return res.redirect("/product/allproducts");
     },
     'carrito': (req, res) => {
         let listaProductos = leerJSON();
-        res.render("carrito", { 'Productos': listaProductos });
+        return res.render("carrito", { 'Productos': listaProductos });
 
     }
 }

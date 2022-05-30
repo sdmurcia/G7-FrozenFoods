@@ -43,11 +43,14 @@
             id="contraseña"
             class="cuadros-input"
           />
+          <% if (locals.errors && errors.password) { %>
+            <div class="text-error"><%= errors.password.msg %></div>
+            <% } %>
         </div>
 
         <div class="recordarme">
           <div>
-            <input type="checkbox" name="si_recuerdame" id="recordarme" />
+            <input type="checkbox" name="rememberMe" id="recordarme" />
             <label for="recordarme">Recordarme</label>
           </div>
           <div>

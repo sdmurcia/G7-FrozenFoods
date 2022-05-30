@@ -26,7 +26,7 @@
                 <div class="imagen-editar">
                     <div class="textos-e-input">
                         <label for="productImage" class="textos-guia">Seleccione la imagen del producto:</label>  
-                        <input type="file" name="imageProduct" id="imageProduct" class="cuadros-input">
+                        <input type="file" name="imageProduct" id="imageProduct" class="cuadros-input <%= locals.errors && errors.imageProduct ? 'is-invalid': null  %>">
                         <% if(locals.errors && errors.imageProduct){ %>
                             <div class="texto-error">
                                 <%= errors.imageProduct.msg %>
@@ -37,7 +37,7 @@
 
                     <div class="textos-e-input">
                         <label for="productCategory" class="textos-guia">Categoría del producto:</label>
-                        <select name="productCategory" id="productCategory" class="cuadros-input">
+                        <select name="productCategory" id="productCategory" class="cuadros-input <%= locals.errors && errors.productCategory ? 'is-invalid': null  %>">
                         <option value="">Seleccione una opción</option>
                         <%
                         let categorias = ['Acompañamientos','Vegetariano','Arroces','Carnes','Cremas, sopas y cazuelas','Postres'];
@@ -63,7 +63,7 @@
                               
                     <div class="textos-e-input">
                         <label for="productName" class="textos-guia">Nombre del producto:</label>
-                        <input type="text" name="productName" id="productName" class="cuadros-input" value= <%= locals.oldData? oldData.productName : null %>>
+                        <input type="text" name="productName" id="productName" class="cuadros-input <%= locals.errors && errors.productName ? 'is-invalid': null  %>" value= <%= locals.oldData? oldData.productName : null %>>
                         <% if(locals.errors && errors.productName){ %>
                             <div class="texto-error">
                                 <%= errors.productName.msg %>
@@ -76,7 +76,7 @@
 
                     <div class="textos-e-input">
                         <label for="productDescription" class="textos-guia">Descripción del producto:</label>
-                        <textarea type="text" name="productDescription" id="productDescription" class="cuadros-input"><%= locals.oldData? oldData.productDescription : null %></textarea>     
+                        <textarea type="text" name="productDescription" id="productDescription" class="cuadros-input <%= locals.errors && errors.productDescription ? 'is-invalid': null  %>"><%= locals.oldData? oldData.productDescription : null %></textarea>     
                     <% if(locals.errors && errors.productDescription){ %>
                         <div class="texto-error">
                             <%= errors.productDescription.msg %>
@@ -86,7 +86,7 @@
 
                     <div class="textos-e-input">
                         <label for="productPrice" class="textos-guia">Precio del producto:</label>
-                        <input type="number" name="productPrice" id="productPrice" class="cuadros-input" value="<% if(locals.oldData) {%><%=oldData.productPrice%><%} else {%>null<%} %>" >
+                        <input type="number" name="productPrice" id="productPrice" class="cuadros-input <%= locals.errors && errors.productPrice ? 'is-invalid': null  %>" value="<% if(locals.oldData) {%><%=oldData.productPrice%><%} else {%>null<%} %>" >
                         <% if(locals.errors && errors.productPrice){ %>
                             <div class="texto-error">
                                 <%= errors.productPrice.msg %>
@@ -96,7 +96,7 @@
 
                     <div class="textos-e-input">
                         <label for="productDiscount" class="textos-guia">Descuento del producto:</label>
-                        <input type="number" name="productDiscount" id="productDiscount" class="cuadros-input" value="<% if(locals.oldData) {%><%=oldData.productDiscount%><%} else {%>null<%} %>" >
+                        <input type="number" name="productDiscount" id="productDiscount" class="cuadros-input <%= locals.errors && errors.productDiscount ? 'is-invalid': null  %>" value="<% if(locals.oldData) {%><%=oldData.productDiscount%><%} else {%>null<%} %>" >
                         <% if(locals.errors && errors.productDiscount){ %>
                             <div class="texto-error">
                                 <%= errors.productDiscount.msg %>

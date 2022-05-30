@@ -5,7 +5,6 @@
   "name": "Aquiles",
   "last_name": "Bailoyo",
   "password": "$2a$10$Y9j6CHmkz7N8ebwJZpk0F.jWGKHlEx8pAj7bIcQzRYvArEtShPMlq",
-  "passwordconf": "123456",
   "avatar": "1653801082520_img.jpg"
  },
  {
@@ -14,7 +13,6 @@
   "name": "esteban",
   "last_name": "quito",
   "password": "$2a$10$WkbvoeEyA/PT7IOJfHYEoeyGDzBoOy1g5Wp9yUquN0dr.pZttJrKK",
-  "passwordconf": "1234567",
   "avatar": "1653801203149_img.jpg"
  },
  {
@@ -23,7 +21,14 @@
   "name": "Cosme",
   "last_name": "Fulanito",
   "password": "$2a$10$WSMxUPax6iy4CZNDvgfQS.IIx/piMEKYh/G4t03yBbT6DvOJ3vY2a",
-  "passwordconf": "123456789",
   "avatar": "1653801288335_img.jpg"
+ },
+ {
+  "id": 4,
+  "email": "fulanito12@algo.com",
+  "name": "fula",
+  "last_name": "nito",
+  "password": "$2a$10$U6CME7rwTPavg446V8Rwfuyug6RV3s8SYjvk.31lGjNDP8/dY/5EO",
+  "avatar": "1653868898660_img.jpg"
  }
 ]

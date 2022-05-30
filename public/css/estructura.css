@@ -155,6 +155,10 @@ footer h6{
    font-size: 1.2rem;
    text-align: center;
 }
+.is-invalid {
+    border: solid 1px red;
+}
+
 /*Media querys*/
 /*Media query tablet*/
 @media (min-width: 481px) {

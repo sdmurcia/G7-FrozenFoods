@@ -22,17 +22,21 @@
   <body class="estilo-body">
     <!-- Header -->
     <%- include('partials/header') %>
-    <div class="container" style="margin-top: 40px;">
+    <div class="container" style="margin:auto; margin-top: 40px; text-align:center;">
         <div>
-            <div">
-                <h2> <%= user.name %> </h2>
-                <img src="/avatars/<%=user.avatar%> ">
+            <div>
+                <h1> hola! <%= user.name %> </h1>
+                <img src="/images/avatars/<%=user.avatar%>" style="width:60rem">
                 <br>
                 <br>
                 <div><%= user.email %> </div>
             </div>
+            
         </div>
+    </div>
     <!-- Footer -->
+   
     <%- include('partials/footer') %>
+
   </body>
 </html>

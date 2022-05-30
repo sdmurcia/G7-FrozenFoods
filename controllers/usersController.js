@@ -6,10 +6,11 @@ const User = require('../models/Users')
 
 //función que trae los errores desde la ruta.
 const { validationResult } = require("express-validator");
+const req = require("express/lib/request");
 
 const usersController = {
   signIn: (req, res) => {
-    res.render("signIn", { req: req });
+	 res.render("signIn", { req: req });
   },
   signUp: (req, res) => {
     res.render("signUp");
@@ -28,10 +29,10 @@ const usersController = {
     let userInDB = User.findByField('email', req.body.email);
 
 		if (userInDB) {
-			return res.render('userRegisterForm', {
+			return res.render('signUp', {
 				errors: {
 					email: {
-						msg: 'Este email no esta disponible'
+						msg: 'Este email no está disponible'
 					}
 				},
 				oldData: req.body
@@ -45,7 +46,6 @@ const usersController = {
 		}
 
 		let userCreated = User.create(userToCreate);
-
 		return res.redirect('/users/signIn');
 
   },
@@ -57,12 +57,17 @@ const usersController = {
 			if (passwordCompare) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
+
+				if(req.body.rememberMe){
+                 res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)*2})
+				}
+
 				return res.redirect('/users/profile');
 			} 
 			return res.render('signIn', {
 				errors: {
-					email: {
-						msg: 'Las credenciales son incorrectas'
+					password: {
+						msg: 'La contraseña es incorrecta'
 					}
 				}
 			});
@@ -81,6 +86,11 @@ const usersController = {
 			user: req.session.userLogged
 		});
 	},
+  logout: (req, res) =>{
+	  res.clearCookie('userEmail');
+	  req.session.destroy();
+	  return res.redirect('/');
+  }
 };
 
 module.exports = usersController;

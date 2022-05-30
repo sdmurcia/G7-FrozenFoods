@@ -26,7 +26,7 @@
         <section class="seccion-productos">
          <% for (const producto of visitados){%>
             <article class="producto">
-                <img src="/images/<%=producto.image %>" alt="albondigas">
+                <img src="/images/products/<%=producto.image %>" alt="albondigas">
                 <p class="description"> <%= producto.producto %></p>
                 <p class="precio">$<%= producto.precio %></p>
                 <a href="/product/detalle/<%= producto.id %>">
@@ -45,7 +45,7 @@
         <section class="seccion-productos">
             <% for (const producto of enOferta){%>
                 <article class="producto">
-                    <img src="/images/<%=producto.image %>" alt="albondigas">
+                    <img src="/images/products/<%=producto.image %>" alt="albondigas">
                     <p class="description"> <%= producto.producto %></p>
                     <p class="precio">$<%= producto.precio-(producto.precio*(producto.descuento/100)) %> <strike><%= producto.precio %></strike></p>
                     <a href="/product/detalle/<%= producto.id %>">

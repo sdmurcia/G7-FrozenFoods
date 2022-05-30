@@ -10,7 +10,7 @@ const { body } = require('express-validator');
 //****** configurando multer****
 let storage=multer.diskStorage({
     destination: (req,res,cb)=>{
-        const rutaimagenes = path.join(__dirname,('../public/images'));
+        const rutaimagenes = path.join(__dirname,('../public/images/products'));
         cb(null, rutaimagenes);
     },
     filename: (req,file,cb)=>{
