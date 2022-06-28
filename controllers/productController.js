@@ -1,24 +1,31 @@
+let db = require ("../database/models/index");
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let leerJSON = () => {
-    //*****se le da manejo si el archivo está vacío */
-    let products;
+let leerDbProducts = () => {
+     let products1 = db.Producto.findAll();
+     let products = JSON.parse((JSON.stringify(products1, null, 4)));
     if (products == '') {
         products = [];
-    } else {
-        products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    }
+    } 
+    return products;
+}
+let leerJSON = () => {
+    
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    if (products == '') {
+        products = [];
+    } 
     return products;
 }
 
 const productController = {
     'allProducts': (req, res) => {
-        let listaProductos = leerJSON();
+        let listaProductos = leerDbProducts();
 
-        let acompanamientos = listaProductos.filter(productos => productos.categoria == "Acompañamientos");
+        let acompanamientos = listaProductos.filter(productos => productos.categoria == "Acompañamientos")
         let arroces = listaProductos.filter(productos => productos.categoria == "Arroces");
         let carnes = listaProductos.filter(productos => productos.categoria == "Carnes");
         let vegetariano = listaProductos.filter(productos => productos.categoria == "Vegetariano");
@@ -27,6 +34,7 @@ const productController = {
 
 
        return res.render("allProducts", { 'acompanamientos': acompanamientos, 'arroces': arroces, 'carnes': carnes, 'vegetariano': vegetariano, 'sopas': sopas, 'postres': postres, 'Productos': listaProductos });
+     //return res.send(acompanamientos);   
     },
     'product': (req, res) => {
         let listaProductos = leerJSON();
@@ -56,7 +64,16 @@ const productController = {
                 "descuento": req.body.productDiscount,
                 "categoria": req.body.productCategory,
                 "Visitados": visitados
-            }
+            };
+           db.Producto.create({
+               producto: req.body.productName,
+                descripcion: req.body.productDescription,
+                precio: req.body.productPrice,
+                image: req.file.filename,
+                descuento: req.body.productDiscount,
+                categoria: req.body.productCategory,
+                visitados: visitados
+            });  
             listaProductos.push(nuevoProducto);
             let productsJSON = JSON.stringify(listaProductos, null, 4);
             fs.writeFileSync(productsFilePath, productsJSON);

@@ -1,202 +1,242 @@
 [
-	{
-		"id": 1,
-		"producto": "Wok de vegetales",
-		"descripcion": "Arroz con  mix de vegetales con jengibre, ajo y salsa de soya.",
-		"precio": "5",
-		"image": "wok-vege.jpg",
-		"descuento": "2",
-		"categoria": "Arroces",
-		"Visitados": "Si"
-	},
-	{
-		"id": 2,
-		"producto": "10 Albondigas",
-		"descripcion": "Carne de res molida especial, miga de pan, huevo , sal, albahaca y salsa napòlitana.",
-		"precio": "2",
-		"image": "albondigas.jpg",
-		"descuento": "2",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	},
-	{
-		"id": 3,
-		"producto": "Alitas",
-		"descripcion": " Alitas de pollo marinadas con paprika, miel, mostaza, comino y sal.\r\n                            \r\n                    ",
-		"precio": "3",
-		"image": "alitas.jpg",
-		"descuento": "5",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	},
-	{
-		"id": 4,
-		"producto": "Lasaña de pollo",
-		"descripcion": "Pechuga desmechada, tomates seleccionados, cebolla, pesto, hiervas aromatizantes.",
-		"precio": "4",
-		"image": "lasaña-pollo.jpg",
-		"descuento": "10",
-		"categoria": "Acompañamientos",
-		"Visitados": "No"
-	},
-	{
-		"id": 5,
-		"producto": "Goulash",
-		"descripcion": "Carne de res en cubos marinada con finas hierbas , zanahoria , cocido en sus jugos a temperatura controlada.",
-		"precio": "3",
-		"image": "goulash.jpg",
-		"descuento": "0",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	},
-	{
-		"id": 6,
-		"producto": "Vegetales a la plancha",
-		"descripcion": "Vegetales dorados a la plancha con: cebolla, zuchini verde, zuchini amarillo, berenjena, sal, pimenton ahumado, aceite de oliva y albaca.",
-		"precio": "2",
-		"image": "vegetales.jpg",
-		"descuento": "5",
-		"categoria": "Vegetariano",
-		"Visitados": "No"
-	},
-	{
-		"id": 7,
-		"producto": "Vegetales blanqueados",
-		"descripcion": "Mezcla de vegetales, brocoli, coliflor, zanahoria y habichuela al vapor con aceite de oliva y sal.",
-		"precio": "2",
-		"image": "vege-blanc.jpg",
-		"descuento": "10",
-		"categoria": "Vegetariano",
-		"Visitados": "Si"
-	},
-	{
-		"id": 8,
-		"producto": "Lasaña vegetariana",
-		"descripcion": "Berenjenas, zuchinni verde y amarillo, pimentón ahumado, zanahoria, albahaca, salsa napolitana, queso mozarella y pasta.",
-		"precio": "3",
-		"image": "lasaña-vege.jpg",
-		"descuento": "10",
-		"categoria": "Vegetariano",
-		"Visitados": "No"
-	},
-	{
-		"id": 9,
-		"producto": "Sopa de lentejas al coco",
-		"descripcion": "Lentejas rojas, cebolla, ajo, jengibre, curry en polvo, callen, leche de coco, fondo de verduras, coco rayado, tomate en trozos ,espinaca y sal.",
-		"precio": "2.5",
-		"image": "lentejas-coco.jpg",
-		"descuento": "0",
-		"categoria": "Cremas, sopas y cazuelas",
-		"Visitados": "No"
-	},
-	{
-		"id": 10,
-		"producto": "Carne de res desmechada",
-		"descripcion": "Carne de res mechada con hogao criollo.",
-		"precio": "2.5",
-		"image": "desmechada.jpg",
-		"descuento": "0",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	},
-	{
-		"id": 11,
-		"producto": "Pollo al curry",
-		"descripcion": "Pechuga de pollo con: cebolla cabezona, genjibre, ajo, curry amarillo en polvo, tomate y leche de coco.",
-		"precio": "4",
-		"image": "pollo-curry.jpg",
-		"descuento": "10",
-		"categoria": "Carnes",
-		"Visitados": "No"
-	},
-	{
-		"id": 12,
-		"producto": "Pure de papa",
-		"descripcion": "Pure de papa sabanera, mantequilla, leche y sal.",
-		"precio": "1.5",
-		"image": "pure-papa.jpg",
-		"descuento": "0",
-		"categoria": "Acompañamientos",
-		"Visitados": "No"
-	},
-	{
-		"id": 13,
-		"producto": "Vegetales al Wok",
-		"descripcion": "Mix de Vegetales ,zanahoria,zuchini verde,zuchini amarillo, cebolla, salteados al wok con genjibre ajo y salsa soya",
-		"precio": "3.5",
-		"image": "wok-vege.jpg",
-		"descuento": "0",
-		"categoria": "Vegetariano",
-		"Visitados": "No"
-	},
-	{
-		"id": 14,
-		"producto": "Arroz con coco",
-		"descripcion": "Arroz con titote de coco.",
-		"precio": "2.5",
-		"image": "arroz-coco.jpg",
-		"descuento": "0",
-		"categoria": "Arroces",
-		"Visitados": "Si"
-	},
-	{
-		"id": 15,
-		"producto": "Calentao",
-		"descripcion": "Arroz, carne de cerdo,platano maduro,frijol, hogao, pollo, chorizo, cilantro.",
-		"precio": "4",
-		"image": "calentao.jpg",
-		"descuento": "5",
-		"categoria": "Arroces",
-		"Visitados": "No"
-	},
-	{
-		"id": 16,
-		"producto": "WOK de Cerdo",
-		"descripcion": "Arroz al wok con cerdo y mix de vegetales con jengibre, ajo y salsa de soya",
-		"precio": "4.5",
-		"image": "wok-cerdo.jpg",
-		"descuento": "10",
-		"categoria": "Arroces",
-		"Visitados": "Si"
-	},
-	{
-		"id": 17,
-		"producto": "WOK de pollo",
-		"descripcion": "Arroz al wok con pollo y mix de vegetales con jengibre, ajo y salsa de soya.",
-		"precio": "4.5",
-		"image": "wok-pollo.jpg",
-		"descuento": "0",
-		"categoria": "Arroces",
-		"Visitados": "No"
-	},
-	{
-		"id": 18,
-		"producto": "Callos a la Madrileña",
-		"descripcion": "Menudo, pezuña de cerdo, chorizo, garbanzos, pimenton, tomate, cebolla, perejil, chocolate y salsas de tomate.",
-		"precio": "3.5",
-		"image": "callos-madri.jpg",
-		"descuento": "0",
-		"categoria": "Carnes",
-		"Visitados": "No"
-	},
-	{
-		"id": 19,
-		"producto": "Lomo stroganoff",
-		"descripcion": "Julianas de lomo de res con champiñones en suave salsa de carne y crema de leche.",
-		"precio": "4.5",
-		"image": "stroganoff.jpg",
-		"descuento": "5",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	},
-	{
-		"id": 20,
-		"producto": "Salmon grille",
-		"descripcion": "Lomo de Salmòn noruego, sal , pimienta y salsa de la casa.",
-		"precio": "5",
-		"image": "salmon.jpg",
-		"descuento": "10",
-		"categoria": "Carnes",
-		"Visitados": "Si"
-	}
+    {
+        "id": 1,
+        "producto": "Wok de vegetales",
+        "descripcion": "Arroz con  mix de vegetales con jengibre, ajo y salsa de soya.",
+        "precio": "5",
+        "image": "wok-vege.jpg",
+        "descuento": "2",
+        "categoria": "Arroces",
+        "Visitados": "Si"
+    },
+    {
+        "id": 2,
+        "producto": "10 Albondigas",
+        "descripcion": "Carne de res molida especial, miga de pan, huevo , sal, albahaca y salsa napòlitana.",
+        "precio": "4",
+        "image": "albondigas.jpg",
+        "descuento": "2",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 3,
+        "producto": "Alitas",
+        "descripcion": " Alitas de pollo marinadas con paprika, miel, mostaza, comino y sal.\r\n                            \r\n                    ",
+        "precio": "3",
+        "image": "alitas.jpg",
+        "descuento": "5",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 4,
+        "producto": "Lasaña de pollo",
+        "descripcion": "Pechuga desmechada, tomates seleccionados, cebolla, pesto, hiervas aromatizantes.",
+        "precio": "4",
+        "image": "lasaña-pollo.jpg",
+        "descuento": "10",
+        "categoria": "Acompañamientos",
+        "Visitados": "No"
+    },
+    {
+        "id": 5,
+        "producto": "Goulash",
+        "descripcion": "Carne de res en cubos marinada con finas hierbas , zanahoria , cocido en sus jugos a temperatura controlada.",
+        "precio": "3",
+        "image": "goulash.jpg",
+        "descuento": "0",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 6,
+        "producto": "Vegetales a la plancha",
+        "descripcion": "Vegetales dorados a la plancha con: cebolla, zuchini verde, zuchini amarillo, berenjena, sal, pimenton ahumado, aceite de oliva y albaca.",
+        "precio": "2",
+        "image": "vegetales.jpg",
+        "descuento": "5",
+        "categoria": "Vegetariano",
+        "Visitados": "No"
+    },
+    {
+        "id": 7,
+        "producto": "Vegetales blanqueados",
+        "descripcion": "Mezcla de vegetales, brocoli, coliflor, zanahoria y habichuela al vapor con aceite de oliva y sal.",
+        "precio": "2",
+        "image": "vege-blanc.jpg",
+        "descuento": "10",
+        "categoria": "Vegetariano",
+        "Visitados": "Si"
+    },
+    {
+        "id": 8,
+        "producto": "Lasaña vegetariana",
+        "descripcion": "Berenjenas, zuchinni verde y amarillo, pimentón ahumado, zanahoria, albahaca, salsa napolitana, queso mozarella y pasta.",
+        "precio": "3",
+        "image": "lasaña-vege.jpg",
+        "descuento": "10",
+        "categoria": "Vegetariano",
+        "Visitados": "No"
+    },
+    {
+        "id": 9,
+        "producto": "Sopa de lentejas al coco",
+        "descripcion": "Lentejas rojas, cebolla, ajo, jengibre, curry en polvo, callen, leche de coco, fondo de verduras, coco rayado, tomate en trozos ,espinaca y sal.",
+        "precio": "2.5",
+        "image": "lentejas-coco.jpg",
+        "descuento": "0",
+        "categoria": "Cremas, sopas y cazuelas",
+        "Visitados": "No"
+    },
+    {
+        "id": 10,
+        "producto": "Carne de res desmechada",
+        "descripcion": "Carne de res mechada con hogao criollo.",
+        "precio": "2.5",
+        "image": "desmechada.jpg",
+        "descuento": "0",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 11,
+        "producto": "Pollo al curry",
+        "descripcion": "Pechuga de pollo con: cebolla cabezona, genjibre, ajo, curry amarillo en polvo, tomate y leche de coco.",
+        "precio": "4",
+        "image": "pollo-curry.jpg",
+        "descuento": "10",
+        "categoria": "Carnes",
+        "Visitados": "No"
+    },
+    {
+        "id": 12,
+        "producto": "Pure de papa",
+        "descripcion": "Pure de papa sabanera, mantequilla, leche y sal.",
+        "precio": "1.5",
+        "image": "pure-papa.jpg",
+        "descuento": "0",
+        "categoria": "Acompañamientos",
+        "Visitados": "No"
+    },
+    {
+        "id": 13,
+        "producto": "Vegetales al Wok",
+        "descripcion": "Mix de Vegetales ,zanahoria,zuchini verde,zuchini amarillo, cebolla, salteados al wok con genjibre ajo y salsa soya",
+        "precio": "3.5",
+        "image": "wok-vege.jpg",
+        "descuento": "0",
+        "categoria": "Vegetariano",
+        "Visitados": "No"
+    },
+    {
+        "id": 14,
+        "producto": "Arroz con coco",
+        "descripcion": "Arroz con titote de coco.",
+        "precio": "2.5",
+        "image": "arroz-coco.jpg",
+        "descuento": "0",
+        "categoria": "Arroces",
+        "Visitados": "Si"
+    },
+    {
+        "id": 15,
+        "producto": "Calentao",
+        "descripcion": "Arroz, carne de cerdo,platano maduro,frijol, hogao, pollo, chorizo, cilantro.",
+        "precio": "4",
+        "image": "calentao.jpg",
+        "descuento": "5",
+        "categoria": "Arroces",
+        "Visitados": "No"
+    },
+    {
+        "id": 16,
+        "producto": "WOK de Cerdo",
+        "descripcion": "Arroz al wok con cerdo y mix de vegetales con jengibre, ajo y salsa de soya.",
+        "precio": "4.5",
+        "image": "wok-cerdo.jpg",
+        "descuento": "10",
+        "categoria": "Arroces",
+        "Visitados": "Si"
+    },
+    {
+        "id": 17,
+        "producto": "WOK de pollo",
+        "descripcion": "Arroz al wok con pollo y mix de vegetales con jengibre, ajo y salsa de soya.",
+        "precio": "4.5",
+        "image": "wok-pollo.jpg",
+        "descuento": "0",
+        "categoria": "Arroces",
+        "Visitados": "No"
+    },
+    {
+        "id": 18,
+        "producto": "Callos a la Madrileña",
+        "descripcion": "Menudo, pezuña de cerdo, chorizo, garbanzos, pimenton, tomate, cebolla, perejil, chocolate y salsas de tomate.",
+        "precio": "3.5",
+        "image": "callos-madri.jpg",
+        "descuento": "0",
+        "categoria": "Carnes",
+        "Visitados": "No"
+    },
+    {
+        "id": 19,
+        "producto": "Lomo stroganoff",
+        "descripcion": "Julianas de lomo de res con champiñones en suave salsa de carne y crema de leche.",
+        "precio": "4.5",
+        "image": "stroganoff.jpg",
+        "descuento": "5",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 20,
+        "producto": "Salmon grille",
+        "descripcion": "Lomo de Salmòn noruego, sal , pimienta y salsa de la casa.",
+        "precio": "5",
+        "image": "salmon.jpg",
+        "descuento": "10",
+        "categoria": "Carnes",
+        "Visitados": "Si"
+    },
+    {
+        "id": 21,
+        "producto": "prueba",
+        "descripcion": "sadsdfdsf",
+        "precio": "5",
+        "image": "1656356380966_img.jpg",
+        "descuento": "0",
+        "categoria": "Acompañamientos",
+        "Visitados": "Si"
+    },
+    {
+        "id": 22,
+        "producto": "prueba 2",
+        "descripcion": "asdsdfsdfdsf",
+        "precio": "3",
+        "image": "1656358305698_img.jpg",
+        "descuento": "5",
+        "categoria": "Vegetariano",
+        "Visitados": "Si"
+    },
+    {
+        "id": 23,
+        "producto": "prueba3",
+        "descripcion": "sdfdsfdsf",
+        "precio": "5",
+        "image": "1656358586670_img.jpg",
+        "descuento": "2",
+        "categoria": "Vegetariano",
+        "Visitados": "Si"
+    },
+    {
+        "id": 24,
+        "producto": "prueba6",
+        "descripcion": "fdgfdgdfg",
+        "precio": "8",
+        "image": "1656358778604_img.jpg",
+        "descuento": "2",
+        "categoria": "Vegetariano",
+        "Visitados": "Si"
+    }
 ]
