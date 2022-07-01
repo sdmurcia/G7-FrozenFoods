@@ -19,3 +19,6 @@ Soy de argentina, tengo 21 años y actualmente estoy en el segundo año de la li
 
 ## Link tablero trello:
 * https://trello.com/b/FNApuyZU/frozenfoods
+
+## Link Estructura base de datos
+* https://drive.google.com/file/d/1vXIPa8UjIUtmccvLzQT3JpB66Owahhs9/view?usp=sharing 
