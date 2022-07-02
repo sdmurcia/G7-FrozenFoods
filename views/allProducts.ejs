@@ -1,158 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/estructura.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/estructura.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+    </head>
 
 <body class="estilo-body">
     <!-- Header -->
     <%- include('partials/header') %>
         <main>
-            <%if(acompanamientos.length!=0){%>
+             
+            
+            
+            <%if(categorias[0]!=0){%>
                 <h2 class="titular">Acompañamientos</h2>
                 <section class="seccion-productos">
-                    <% for (const producto of acompanamientos){%>
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==1){%>
                         <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
                                 <button type="button">Detalles <br>y mas</button>
                             </a>
                             <a href="/product/carrito">
                                 <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
                             </a>
                         </article>
+                        <%}%>
+                
                     <%}%>
                 </section>
             <%}%>
-            
-            <%if(arroces.length!=0){%>
+
+            <%if(categorias[1]!=0){%>
                 <h2 class="titular">Arroces</h2>
                 <section class="seccion-productos">
-                    <% for (const producto of arroces){%>
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==2){%>
                         <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
                                 <button type="button">Detalles <br>y mas</button>
                             </a>
                             <a href="/product/carrito">
                                 <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
                             </a>
                         </article>
+                        <%}%>
+                
                     <%}%>
                 </section>
             <%}%>
-            <%if(sopas.length!=0){%>
-                <h2 class="titular">Cremas, sopas y cazuelas</h2>
+
+            <%if(categorias[2]!=0){%>
+                <h2 class="titular">Carnes, pollos y pescados</h2>
                 <section class="seccion-productos">
-                    <% for (const producto of sopas){%>
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==3){%>
                         <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
                                 <button type="button">Detalles <br>y mas</button>
                             </a>
                             <a href="/product/carrito">
                                 <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
                             </a>
                         </article>
+                        <%}%>
+                
                     <%}%>
                 </section>
             <%}%>
-            <%if(postres.length!=0){%>
-                <h2 class="titular">Postres</h2>
-                <section class="seccion-productos">
-                    <% for (const producto of postres){%>
-                        <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
-                                <button type="button">Detalles <br>y mas</button>
-                            </a>
-                            <a href="/product/carrito">
-                                <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
-                            </a>
-                        </article>
-                    <%}%>
-                </section>
-            <%}%>
-            <%if(carnes.length!=0){%>
-                <h2 class="titular">Carne, pollo y pescados</h2>
-                <section class="seccion-productos">
-                    <% for (const producto of carnes){%>
-                        <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
-                                <button type="button">Detalles <br>y mas</button>
-                            </a>
-                            <a href="/product/carrito">
-                                <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
-                            </a>
-                        </article>
-                    <%}%>
-                </section>
-            <%}%>
-            <%if(vegetariano.length!=0){%>
+
+            <%if(categorias[3]!=0){%>
                 <h2 class="titular">Vegetarianos</h2>
                 <section class="seccion-productos">
-                    <% for (const producto of vegetariano){%>
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==4){%>
                         <article class="producto">
-                            <img src="/images/products/<%=producto.image %>" alt="albondigas">
-                            <p class="description">
-                                <%= producto.producto %>
-                            </p>
-                            <p class="precio">$<%= producto.precio %>
-                            </p>
-                            <a href="/product/detalle/<%= producto.id %>">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
                                 <button type="button">Detalles <br>y mas</button>
                             </a>
                             <a href="/product/carrito">
                                 <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
                             </a>
                         </article>
+                        <%}%>
+                
                     <%}%>
                 </section>
             <%}%>
+            
+            <%if(categorias[4]!=0){%>
+                <h2 class="titular">Cremas, sopas y cazuelas</h2>
+                <section class="seccion-productos">
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==5){%>
+                        <article class="producto">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
+                                <button type="button">Detalles <br>y mas</button>
+                            </a>
+                            <a href="/product/carrito">
+                                <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
+                            </a>
+                        </article>
+                        <%}%>
+                
+                    <%}%>
+                </section>
+            <%}%>
+
+            <%if(categorias[5]!=0){%>
+                <h2 class="titular">Postres</h2>
+                <section class="seccion-productos">
+                    <% for (let i=0; i<productos.length; i++){%>
+                        <% if (productos[i].idCategoria==6){%>
+                        <article class="producto">
+                            <img src="/images/products/<%= productos[i].image %>" alt="albondigas">
+                            <p class="description"> <%= productos[i].producto %></p>
+                            <p class="precio">$<%= productos[i].precio %></p>
+                            <a href="/product/detalle/<%= productos[i].id %>">
+                                <button type="button">Detalles <br>y mas</button>
+                            </a>
+                            <a href="/product/carrito">
+                                <button type="button">Agregar <br> <i class="fa-solid fa-plus"></i></button>
+                            </a>
+                        </article>
+                        <%}%>
+                
+                    <%}%>
+                </section>
+            <%}%>
+            
 
             
 
 
 
 
-
+ 
         </main>
         <!-- Footer -->
         <%- include('partials/footer') %>

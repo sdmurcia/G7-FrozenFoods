@@ -2,7 +2,7 @@ module.exports = function(sequelize,dataTypes){
 let alias = "Producto";
 
 let cols ={
-    id_prod: {
+    id: {
     type: dataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true
@@ -22,8 +22,8 @@ let cols ={
     descuento: {
     type: dataTypes.DOUBLE
     },
-    categoria: {
-    type: dataTypes.STRING
+    idCategoria: {
+    type: dataTypes.INTEGER
     },
     visitados: {
     type: dataTypes.STRING
@@ -36,5 +36,14 @@ timestamps: false
 }
 
 let Product=sequelize.define(alias,cols,config);
+
+Product.associate = function(models){
+    Product.belongsTo(models.Categoria, {
+        as : 'category',
+        foreignKey : 'idCategoria'
+    })
+}
+
+
 return Product;
 }

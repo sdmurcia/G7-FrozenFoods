@@ -42,10 +42,9 @@
                         <%
                         let categorias = ['Acompañamientos','Vegetariano','Arroces','Carnes','Cremas, sopas y cazuelas','Postres'];
                         %>
-                        <% for (const categoria of categorias){%>
-                            <option value="<%= categoria %>"
-                                <%= locals.oldData && (categoria === oldData.productCategory) ? 'selected':null %>>
-                                <%= categoria %></option>
+                        <% for (let i=0; i<categorias.length; i++){%>
+                            <option value=<%=i+1%>>
+                                <%= categorias[i] %></option>
                         <%}%>
                         
                         </select>

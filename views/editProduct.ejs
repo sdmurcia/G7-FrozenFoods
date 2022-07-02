@@ -41,16 +41,16 @@
                         <%
                         let categorias = ['Acompañamientos','Vegetariano','Arroces','Carnes','Cremas, sopas y cazuelas','Postres'];
                         %>
-                        <% for (const categoria of categorias){%>
-                            <option value="<%= categoria %>"
+                        <% for (let i=0; i<categorias.length; i++){%>
+                            <option value=<%=i+1%>
                                 <% if(locals.oldData){ %>
-                                <%=  oldData.productCategory===categoria? 'selected':null %>
+                                <%=  oldData.productCategory===categorias[i]? 'selected':null %>
                                     
                                 <% }else {%>
-                                <%=   productDetail.categoria===categoria? 'selected':null %>
+                                <%=   productDetail.categoria===categorias[i]? 'selected':null %>
                                 
                                     <% } %>
-                                ><%= categoria %>
+                                ><%= categorias[i] %>
                             </option>
                         <%}%>
                         </select>

@@ -1,17 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+let db = require ("../database/models/index");
+const Producto=db.Producto;
+const { Op } = require("sequelize");
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let leerJSON=()=>{
-    //*****se le da manejo si el archivo está vacío */
-let products;
-if(products==''){
-products=[];
-}else{
-products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-}
-return products;
-}
+
 
 
 const main = {
@@ -21,10 +12,13 @@ const main = {
 }
 const mainController = {
     'index': (req,res) => {
-        let listaProductos=leerJSON();
-        let ultimosVisitados=listaProductos.filter(productos=>productos.Visitados=="Si");
-        let enOferta=listaProductos.filter(productos=>productos.descuento!="0" && productos.descuento!="");
-        res.render("index", {'Productos':listaProductos, 'visitados':ultimosVisitados, 'enOferta':enOferta});
+        
+        let ultimosVisitados=Producto.findAll({where:{Visitados:"Si"}});
+        let enOferta=Producto.findAll({where:{descuento:{[Op.ne]:[0,'']}}});
+        Promise.all([ultimosVisitados, enOferta]).then(([ultimosVisitados, enOferta])=>{
+            res.render("index", {'visitados':ultimosVisitados, 'enOferta':enOferta});
+        })
+        
     },
 };
 

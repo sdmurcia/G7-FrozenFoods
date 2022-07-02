@@ -238,5 +238,15 @@
         "descuento": "2",
         "categoria": "Vegetariano",
         "Visitados": "Si"
+    },
+    {
+        "id": 25,
+        "producto": "prueba",
+        "descripcion": "sdsdfsdfd",
+        "precio": "5",
+        "image": "1656692779830_img.jpg",
+        "descuento": "2",
+        "categoria": "Vegetariano",
+        "Visitados": "Si"
     }
 ]
