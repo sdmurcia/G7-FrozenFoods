@@ -30,7 +30,7 @@
                 <img src="/images/avatars/<%=user.avatar%>" style="width:60rem">
                 <br>
                 <br>
-                <div><%= user.email %> </div>
+                <h2><%= user.email %> </h2>
                 
                   <form action="/users/profile/<%=user.id%>?_method=DELETE" method="POST">
                     <button type="submit" class="boton-eliminar">Eliminar</button>

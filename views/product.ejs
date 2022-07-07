@@ -41,36 +41,34 @@
               <br>
           </p>
           <div class="agregar">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-minus"></i>
             <div class="cantidad">
-              <h3>cantidad</h3>
-              <input type="text">
-
+              <h3>Cantidad</h3>
+              <input type="number" class="cantidad-input" value="1">
             </div>
           </div>
           <br>
           <br>
           <button class="button-add">Agregar</button>
         
-
-        <div class="botones-producto">
-          <a href="/product/editproduct/<%= productDetail.id%>">
-          <div class="boton-editar">Editar producto</div>
-        </a>
-          <form action="/product/editproduct/<%=productDetail.id%>?_method=DELETE" method="POST">
-            <button type="submit" class="boton-eliminar">Eliminar</button>
-          </form>
-        </div>
+          <% if (locals.isLogged && locals.userLogged.id == 1) { %>   
+            <div class="botones-producto">
+              <a href="/product/editproduct/<%= productDetail.id%>">
+              <div class="boton-editar">Editar producto</div>
+            </a>
+              <form action="/product/editproduct/<%=productDetail.id%>?_method=DELETE" method="POST">
+                <button type="submit" class="boton-eliminar">Eliminar</button>
+              </form>
+            </div>
+          <% } %>
       </article>
       
       </section>
       <aside class="productos-relacionados">
+        <hr class="h">
         <h2 class="otros">productos relacionados</h2>
         <section class="seccion-productos">
-          <i class="fa-solid fa-angle-left"></i>
-          <a href="/product/detalle/<%=productos[8].id%>">
           <article class="producto">
+            <a href="/product/detalle/<%=productos[8].id%>">
             <img src="/images/products/<%=productos[8].image %>" alt="albondigas">
             <p class="description">
               <%= productos[8].producto %>
@@ -79,8 +77,8 @@
             </p>
             </a>
           </article>
-          <a href="/product/detalle/<%=productos[9].id%>">
-          <article class="producto">
+          <article class="producto producto-1">
+            <a href="/product/detalle/<%=productos[9].id%>">
             <img src="/images/products/<%=productos[9].image %>" alt="alitas">
             <p class="description">
               <%= productos[9].producto %>
@@ -89,8 +87,8 @@
             </p>
             </a>
           </article>
-          <a href="/product/detalle/<%=productos[10].id%>">
-            <article class="producto">
+          <article class="producto">
+              <a href="/product/detalle/<%=productos[10].id%>">
               <img src="/images/products/<%=productos[10].image %>" alt="alitas">
               <p class="description">
                 <%= productos[10].producto %>
@@ -99,8 +97,8 @@
               </p>
               </a>
             </article>
-            <a href="/product/detalle/<%=productos[11].id%>">
-              <article class="producto">
+            <article class="producto">
+                <a href="/product/detalle/<%=productos[11].id%>">
                 <img src="/images/products/<%=productos[11].image %>" alt="alitas">
                 <p class="description">
                   <%= productos[11].producto %>
@@ -109,9 +107,8 @@
                 </p>
                 </a>
               </article>
-          <i class="fa-solid fa-angle-right"></i>
+            </section> 
       </aside>
-      </section> 
       
 
     </main>
