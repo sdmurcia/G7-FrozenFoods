@@ -64,6 +64,7 @@ label {
     width: 80%;
     font-size: 1.2rem;
     font-family: sans-serif;
+    resize:none;
 }
 
 .botonsignin {
@@ -77,6 +78,18 @@ label {
     border: none;
     border-radius: 10px;
     width: 80%;
+    cursor:pointer
+}
+.descripcion {
+    border: 1px solid #E0E2DB;
+    border-radius: 0.5rem;
+    padding: 3px 0px;
+    width: 80%;
+    height: 7rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    resize:none;
+
 }
 
 .formulariosign {
@@ -166,7 +179,14 @@ label {
     margin-top: 5rem;
     font-weight: bold;
   }
-
+.error {
+    font-size: 2rem;
+    color: red;
+    text-align: center;
+}
+.success {
+    color: green;
+}
 
 /* media querys tablet*/
 @media (min-width: 481px) {

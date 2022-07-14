@@ -84,6 +84,10 @@ article button {
 article button:hover {
     color: blue;
 }
+.error {
+    background-color: red;
+}
+
 /*main*/
 footer {
     position: static;

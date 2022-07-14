@@ -10,3 +10,16 @@
 * Dejar dudas sin resolver del proyecto.
 ## Dejar de hacer:
 * Procastinar con las fechas de entrega.
+
+## SPRINT 7
+
+### **Para empezar a hacer:** 
+* Reflexiones y correcciones del codigo.
+### **Más de:** 
+* Buenas practicas de codificación aprendidas en clase.
+### **Seguir haciendo:** 
+* Responsabilidad con las funciones.
+### **Menos de:** 
+* No quedar con dudas y problemas del proyecto.
+### **Dejar de hacer:** 
+* No asistir a la retroalimentación de los profesores.
