@@ -30,7 +30,7 @@
     <%- include('partials/header') %>
     <main>
       <p class="aviso-bienvenida">¡Bienvenido!</p>
-      <form action="/users/signIn" method="POST" class="formulariosign">
+      <form action="/users/signIn" method="POST" class="formulariosign" id="form">
         <div class="textos-e-input">
           <label for="email" class="textos-guia">Escribe tu email:</label>
           <input type="email" name="email" id="usuario" class="cuadros-input" />
@@ -46,8 +46,9 @@
           <input
             type="password"
             name="password"
-            id="contraseña"
+            id="password"
             class="cuadros-input"
+            required
           />
           <% if (locals.errors && errors.password) { %>
             <div class="text-error"><%= errors.password.msg %></div>
@@ -64,7 +65,7 @@
           </div>
         </div>
         <div>
-          <button type="submit" class="botonsignin">Ingresar</button>
+          <button type="submit" class="botonsignin" id="submit">Ingresar</button>
         </div>
         <div class="finalform">
           <p>¿Aún no tienes una cuenta?</p>
@@ -74,5 +75,39 @@
     </main>
     <!-- Footer -->
     <%- include('partials/footer') %>
+    <script>
+      const email = document.querySelector('#usuario');
+      const password = document.querySelector('#password')
+      const formulario = document.querySelector("#form");
+      const boton = document.querySelector('#submit')
+      function enventListeners(e) {
+        boton.addEventListener("click", botonInput);
+        email.addEventListener("change", emailInput)
+    }
+    const emailInput = (e) => {
+        const mensajeMail = email.value;
+        if(!mensajeMail.includes('@') && document.getElementById('emailError') != undefined){
+            console.log('a')
+        }
+        else if(!mensajeMail.includes('@')){
+            const emailError = document.createElement('p')
+            emailError.innerHTML = 
+            "<p>Debes ingresar un formato de email valido</p>"
+            emailError.classList.add('error');
+            emailError.setAttribute('id','emailError')
+            formulario.appendChild(emailError);
+        }
+        else if(mensajeMail.includes('@') && document.getElementById('emailError')){
+            let emailError = document.getElementById('emailError')
+            formulario.removeChild(emailError)
+        }
+    }
+    const botonInput = (e) => {
+      if(document.getElementById('emailError')){
+        e.preventDefault();
+      }
+    }
+    enventListeners();
+    </script>
   </body>
 </html>
