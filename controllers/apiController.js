@@ -5,6 +5,9 @@ const { promiseImpl } = require("ejs");
 const Usuario = db.Usuario;
 const Producto = db.Producto;
 
+
+
+
 const apiController = {
     'allUsers': (req, res) => {
         Usuario.findAll({
@@ -51,7 +54,7 @@ const apiController = {
           });
         let productos=Producto.findAll({
             include: ['category'],
-            attributes: { exclude: ['precio', 'image', 'descuento', 'idcategoria', 'visitados'] }
+            attributes: { exclude: ['precio', 'descuento', 'idcategoria', 'visitados'] }
         });
         Promise.all ([productos, contador])
                .then(([productos, contador]) => {
@@ -63,6 +66,7 @@ const apiController = {
                         id: productos[i].id,
                         name: productos[i].producto,
                         description: productos[i].descripcion,
+                        image: productos[i].image,
                         relation : productos[i].category,
                         detail: `http://localhost:3050/api/products/${productos[i].id}`
                     }

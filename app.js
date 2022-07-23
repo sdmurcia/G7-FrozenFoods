@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const methodOverride = require("method-override")
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const cors = require('cors');
+
 //requiero los paquetes para trabajar con session y cookies
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -11,6 +13,7 @@ const cookieParser = require('cookie-parser');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 //Middleware de aplicación, para usar delete y put
+app.use(cors())
 app.use(methodOverride('_method'));
 
 //requerimos middlewares de session y cookies
