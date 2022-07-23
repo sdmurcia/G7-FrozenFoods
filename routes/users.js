@@ -19,7 +19,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 //declaro el archivo de usuarios
-let usersList = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
+//let usersList = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
 
 
 router.get('/signIn', guestMiddleware, usersController.signIn)

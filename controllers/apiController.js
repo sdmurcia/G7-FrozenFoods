@@ -11,7 +11,7 @@ const Producto = db.Producto;
 const apiController = {
     'allUsers': (req, res) => {
         Usuario.findAll({
-            attributes: { exclude: ['lastName', 'password', 'avatar'] }
+            attributes: { exclude: ['password', 'avatar'] }
         })
             .then(usuarios => {
                 let users1 = [];
@@ -19,6 +19,7 @@ const apiController = {
                     users1[i] = {
                         id: usuarios[i].id,
                         nombre: usuarios[i].name,
+                        apellido: usuarios[i].lastName,
                         email: usuarios[i].email,
                         detail: `http://localhost:3050/api/users/${usuarios[i].id}`
                     }
@@ -54,7 +55,7 @@ const apiController = {
           });
         let productos=Producto.findAll({
             include: ['category'],
-            attributes: { exclude: ['precio', 'descuento', 'idcategoria', 'visitados'] }
+            attributes: { exclude: ['descuento', 'idcategoria', 'visitados'] }
         });
         Promise.all ([productos, contador])
                .then(([productos, contador]) => {
@@ -67,6 +68,7 @@ const apiController = {
                         name: productos[i].producto,
                         description: productos[i].descripcion,
                         image: productos[i].image,
+                        price: productos[i].precio,
                         relation : productos[i].category,
                         detail: `http://localhost:3050/api/products/${productos[i].id}`
                     }
