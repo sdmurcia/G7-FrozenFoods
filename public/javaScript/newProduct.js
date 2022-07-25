@@ -11,6 +11,7 @@ const nombre = document.querySelector("#productName");
         upload.addEventListener("change",uploadInput);
     }
     const nombreInput = (e) => {
+        const nombreDiv = document.querySelector("#nombreDiv")
         const nombreError = document.createElement('p');
         if(nombre.value.length < 5 && document.getElementById('nombreError')!= undefined){
             console.log('xd')
@@ -20,14 +21,15 @@ const nombre = document.querySelector("#productName");
             "<p>El nombre debe tener mas de 4 caracteres</p>"
             nombreError.classList.add('error');
             nombreError.setAttribute('id','nombreError')
-            formulario.appendChild(nombreError);
+            nombreDiv.appendChild(nombreError);
         }else if(nombre.value.length >= 5 && document.getElementById('nombreError')){
             let nombreError = document.getElementById('nombreError')
-            formulario.removeChild(nombreError)
+            nombreDiv.removeChild(nombreError)
         }
     }
     const descripcionInput = (e) => {
-        if(descripcion.value.length < 20 && document.getElementById('descripcionError') != undefined){
+        const descriptionDiv = docment.querySelector("#descriptionDiv")
+        if(descripcion.value.length < 20 && document.getElementById('descripcionDiv') != undefined){
             console.log("xd")
         }
         else if(descripcion.value.length < 20){
@@ -36,13 +38,14 @@ const nombre = document.querySelector("#productName");
             "<p>La descripcion debe tener al menos 20 caracteres</p>"
             descripcionError.classList.add('error');
             descripcionError.setAttribute('id','descripcionError')
-            formulario.appendChild(descripcionError);
+            descriptionDiv.appendChild(descripcionError);
         }else if(descripcion.value.length >= 20 && document.getElementById('descripcionError')){
             let descripcionError = document.getElementById('descripcionError')
-            formulario.removeChild(descripcionError)
+            descriptionDiv.removeChild(descripcionError)
         }
     }
     const uploadInput = (e) => {
+        const uploadDiv = document.querySelector("#uploadDiv")
         var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
         var filePath = upload.value;
         if(!allowedExtensions.exec(filePath) && document.getElementById('uploadError') != undefined){
@@ -54,10 +57,10 @@ const nombre = document.querySelector("#productName");
             "<p>Debes seleccionar un formato de imagen valido</p>"
             uploadError.classList.add('error');
             uploadError.setAttribute('id','uploadError')
-            formulario.appendChild(uploadError);
+            uploadDiv.appendChild(uploadError);
         }else if(allowedExtensions.exec(filePath) && document.getElementById('uploadError')){
             let uploadError = document.getElementById('uploadError')
-            formulario.removeChild(uploadError)
+            up.removeChild(uploadError)
         }
     }
 

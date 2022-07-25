@@ -126,7 +126,7 @@ label {
     font-size: 1.6rem;
 }
 .img-producto-editar{
-    width:15rem;
+    width:80%;
 }
 .imagen-editar{
     width:40%;
@@ -142,7 +142,7 @@ label {
     position: relative;
     border: 0.3rem solid #5F7470;
     border-radius: 5rem;
-    width: 35vw;
+    width: 80vw;
     display: block;
     margin: 2rem auto;
     padding: 1rem 0.5rem;
@@ -187,9 +187,6 @@ label {
 .success {
     color: green;
 }
-.img-profile {
-    width: 40%;
-}
 
 /* media querys tablet*/
 @media (min-width: 481px) {
@@ -215,4 +212,7 @@ label {
     .formulariosign {
         width: 33%;
     }
+}
+@media(max-width: 1160px){
+    
 }

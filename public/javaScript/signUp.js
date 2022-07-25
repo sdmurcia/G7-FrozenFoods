@@ -18,6 +18,7 @@ const nombre = document.querySelector("#name");
     
     const nombreInput = (e) => {
         const nombreError = document.createElement('p');
+        const nombreDiv = document.querySelector("#name-div")
         if(nombre.value.length < 3 && document.getElementById('nombreError')!= undefined){
             console.log('xd')
         }
@@ -26,13 +27,14 @@ const nombre = document.querySelector("#name");
             "<p>El nombre debe tener mas de 2 caracteres</p>"
             nombreError.classList.add('error');
             nombreError.setAttribute('id','nombreError')
-            formulario.appendChild(nombreError);
+            nombreDiv.appendChild(nombreError);
         }else if(nombre.value.length >= 3 && document.getElementById('nombreError')){
             let nombreError = document.getElementById('nombreError')
-            formulario.removeChild(nombreError)
+            nombreDiv.removeChild(nombreError)
         }
     }
     const apellidoInput = (e) => {
+        const lastNameDiv = document.querySelector("#lastNameDiv")
         if(apellido.value.length < 3 && document.getElementById('apellidoError') != undefined){
             console.log("xd")
         }
@@ -42,13 +44,14 @@ const nombre = document.querySelector("#name");
             "<p>El apellido debe tener mas de 2 caracteres</p>"
             apellidoError.classList.add('error');
             apellidoError.setAttribute('id','apellidoError')
-            formulario.appendChild(apellidoError);
+            lastNameDiv.appendChild(apellidoError);
         }else if(apellido.value.length >= 3 && document.getElementById('apellidoError')){
             let apellidoError = document.getElementById('apellidoError')
-            formulario.removeChild(apellidoError)
+            lastNameDiv.removeChild(apellidoError)
         }
     }
     const passwordInput = (e) => {
+        const passwordDiv = document.querySelector("#passwordDiv")
         if(password.value.length < 8 && document.getElementById('passwordError') != undefined){
             console.log('continuar error')
         }
@@ -58,14 +61,15 @@ const nombre = document.querySelector("#name");
             "<p>La contraseña debe tener mas de 8 caracteres</p>"
             passwordError.classList.add('error');
             passwordError.setAttribute('id','passwordError')
-            formulario.appendChild(passwordError);
+            passwordDiv.appendChild(passwordError);
         }else if(password.value.length >= 8 && document.getElementById('passwordError')){
             let passwordError = document.getElementById('passwordError')
-            formulario.removeChild(passwordError)
+            passwordDiv.removeChild(passwordError)
         }
         console.log(e.target.value)
     }
     const emailInput = (e) => {
+        const emailDiv = document.querySelector("#emailDiv")
         const mensajeMail = email.value;
         if(!mensajeMail.includes('@') && document.getElementById('emailError') != undefined){
             console.log('a')
@@ -76,17 +80,18 @@ const nombre = document.querySelector("#name");
             "<p>Debes ingresar un formato de email valido</p>"
             emailError.classList.add('error');
             emailError.setAttribute('id','emailError')
-            formulario.appendChild(emailError);
+            emailDiv.appendChild(emailError);
         }
         else if(mensajeMail.includes('@') && document.getElementById('emailError')){
             let emailError = document.getElementById('emailError')
-            formulario.removeChild(emailError)
+            EmailDiv.removeChild(emailError)
         }
         console.log(e.target.value)
     }
     const uploadInput = (e) => {
         var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
         var filePath = upload.value;
+        const fileDiv = document.querySelector("#fileDiv")
         if(!allowedExtensions.exec(filePath) && document.getElementById('uploadError') != undefined){
             console.log("continuar error")
         }
@@ -96,10 +101,10 @@ const nombre = document.querySelector("#name");
             "<p>Debes seleccionar un formato de imagen valido</p>"
             uploadError.classList.add('error');
             uploadError.setAttribute('id','uploadError')
-            formulario.appendChild(uploadError);
+            fileDiv.appendChild(uploadError);
         }else if(allowedExtensions.exec(filePath) && document.getElementById('uploadError')){
             let uploadError = document.getElementById('uploadError')
-            formulario.removeChild(uploadError)
+            fileDiv.removeChild(uploadError)
         }
     }
     const botonInput = (e) => {

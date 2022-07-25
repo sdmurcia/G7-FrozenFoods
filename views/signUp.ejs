@@ -24,7 +24,7 @@
                 <% } %>
         <% } %> -->
         <form action="/users/signUp" method="POST" class="formulariosign" enctype="multipart/form-data" id="form">
-            <div class="textos-e-input">
+            <div class="textos-e-input" id="emailDiv">
                 <label for="email" class="textos-guia">Escribe tu email:</label>
                 <input type="email" 
                 name="email" 
@@ -38,7 +38,7 @@
                 <% } %>
             </div>
 
-            <div class="textos-e-input">
+            <div class="textos-e-input" id="name-div">
                 <label for="name" class="textos-guia">Escribe tu nombre:</label>
                 <input 
                 type="text" 
@@ -53,7 +53,7 @@
                 <% } %>
             </div>
 
-            <div class="textos-e-input">
+            <div class="textos-e-input" id="lastNameDiv">
                 <label for="last_name" class="textos-guia">Escribe tu apellido:</label>
                 <input 
                 type="text" 
@@ -68,12 +68,12 @@
                 <% } %>
             </div>
 
-            <div class="textos-e-input">
+            <div class="textos-e-input" id="fileDiv">
                 <label for="avatar" class="textos-guia">Selecciona tu avatar:</label>
                 <input type="file" name="avatar" id="avatar" class="cuadros-input">
             </div>
 
-            <div class="textos-e-input">
+            <div class="textos-e-input" id="passwordDiv">
                 <label for="password" class="textos-guia">Escribe tu contraseña:</label>
                 <input 
                 type="password" 

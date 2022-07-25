@@ -31,7 +31,7 @@
     <main>
       <p class="aviso-bienvenida">¡Bienvenido!</p>
       <form action="/users/signIn" method="POST" class="formulariosign" id="form">
-        <div class="textos-e-input">
+        <div class="textos-e-input" id="emailDiv">
           <label for="email" class="textos-guia">Escribe tu email:</label>
           <input type="email" name="email" id="usuario" class="cuadros-input" />
           <% if (locals.errors && errors.email) { %>

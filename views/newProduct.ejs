@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/estructura.css">
-    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/productForm.css">
     <title>FrozenFoods/editarproducto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
 
     <div class="flex-editarproducto">
                 <div class="imagen-editar">
-                    <div class="textos-e-input">
+                    <div class="textos-e-input" id="uploadDiv">
                         <label for="productImage" class="textos-guia">Seleccione la imagen del producto:</label>  
                         <input type="file" name="imageProduct" id="imageProduct" class="cuadros-input <%= locals.errors && errors.imageProduct ? 'is-invalid': null  %>">
                         <% if(locals.errors && errors.imageProduct){ %>
@@ -60,7 +60,7 @@
                 <div class="textos-editar">
 
                               
-                    <div class="textos-e-input">
+                    <div class="textos-e-input" id="nombreDiv">
                         <label for="productName" class="textos-guia">Nombre del producto:</label>
                         <input type="text" name="productName" id="productName" class="cuadros-input <%= locals.errors && errors.productName ? 'is-invalid': null  %>" value= <%= locals.oldData? oldData.productName : null %>>
                         <% if(locals.errors && errors.productName){ %>
@@ -73,7 +73,7 @@
 
 
 
-                    <div class="textos-e-input">
+                    <div class="textos-e-input" id="descripcionDiv">
                         <label for="productDescription" class="textos-guia">Descripción del producto:</label>
                         <textarea type="text" name="productDescription" id="productDescription" class="descripcion <%= locals.errors && errors.productDescription ? 'is-invalid': null  %>"><%= locals.oldData? oldData.productDescription : null %></textarea>     
                     <% if(locals.errors && errors.productDescription){ %>

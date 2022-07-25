@@ -12,6 +12,7 @@ const nombre = document.querySelector("#productName");
         }
         const nombreInput = (e) => {
             const nombreError = document.createElement('p');
+            const nombreDiv = document.querySelector("#nombreDiv")
             if(nombre.value.length < 5 && document.getElementById('nombreError')!= undefined){
                 console.log('xd')
             }
@@ -20,13 +21,14 @@ const nombre = document.querySelector("#productName");
                 "<p>El nombre debe tener mas de 4 caracteres</p>"
                 nombreError.classList.add('error');
                 nombreError.setAttribute('id','nombreError')
-                formulario.appendChild(nombreError);
+                nombreDiv.appendChild(nombreError);
             }else if(nombre.value.length >= 5 && document.getElementById('nombreError')){
                 let nombreError = document.getElementById('nombreError')
-                formulario.removeChild(nombreError)
+                nombreDiv.removeChild(nombreError)
             }
         }
         const descripcionInput = (e) => {
+            const descriptionDiv = document.querySelector("#descripcionDiv")
             if(descripcion.value.length < 20 && document.getElementById('descripcionError') != undefined){
                 console.log("xd")
             }
@@ -45,6 +47,7 @@ const nombre = document.querySelector("#productName");
         const uploadInput = (e) => {
             var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
             var filePath = upload.value;
+            const uploadDiv = document.querySelector("#uploadDiv")
             if(!allowedExtensions.exec(filePath) && document.getElementById('uploadError') != undefined){
                 console.log("continuar error")
             }
@@ -54,10 +57,10 @@ const nombre = document.querySelector("#productName");
                 "<p>Debes seleccionar un formato de imagen valido</p>"
                 uploadError.classList.add('error');
                 uploadError.setAttribute('id','uploadError')
-                formulario.appendChild(uploadError);
+                uploadDiv.appendChild(uploadError);
             }else if(allowedExtensions.exec(filePath) && document.getElementById('uploadError')){
                 let uploadError = document.getElementById('uploadError')
-                formulario.removeChild(uploadError)
+                uploadDiv.removeChild(uploadError)
             }
         }
     

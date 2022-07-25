@@ -8,6 +8,7 @@ const email = document.querySelector('#usuario');
     }
     const emailInput = (e) => {
         const mensajeMail = email.value;
+        const emailDiv = document.querySelector("#emailDiv")
         if(!mensajeMail.includes('@') && document.getElementById('emailError') != undefined){
             console.log('a')
         }
@@ -17,11 +18,11 @@ const email = document.querySelector('#usuario');
             "<p>Debes ingresar un formato de email valido</p>"
             emailError.classList.add('error');
             emailError.setAttribute('id','emailError')
-            formulario.appendChild(emailError);
+            emailDiv.appendChild(emailError);
         }
         else if(mensajeMail.includes('@') && document.getElementById('emailError')){
             let emailError = document.getElementById('emailError')
-            formulario.removeChild(emailError)
+            emailDiv.removeChild(emailError)
         }
     }
     const botonInput = (e) => {
